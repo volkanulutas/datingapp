@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2afb5777-6588-4b97-bace-f0913a9b7bf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/datingapp-auth-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-auth-service/src/main/java/com/datingapp/auth/AuthApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-auth-service/src/test/java/com/datingapp/auth/AuthApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-chat-service/src/main/resources/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-chat-service/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-chat-service/src/main/resources/static/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-game-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-game-service/src/main/java/com/datingapp/game/GameApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-game-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-game-service/src/test/java/com/datingapp/game/GameApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-login-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-login-service/src/main/java/com/datingapp/login/LoginApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-login-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-login-service/src/test/java/com/datingapp/login/LoginApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-service-discovery/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-service-discovery/src/main/java/com/datingapp/servicediscovery/ServiceDiscoveryApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-service-discovery/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datingapp-service-discovery/src/test/java/com/datingapp/servicediscovery/ServiceDiscoveryApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datingapp-chat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/WebsocketDemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/config/WebSocketConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/controller/ChatController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/controller/WebSocketEventListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/model/ChatMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/datingapp/chat/WebsocketDemoApplicationTests.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

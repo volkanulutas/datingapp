@@ -1,0 +1,7 @@
+/target/
+/datingapp-auth-service/target/
+/datingapp-chat-service/target/
+/datingapp-game-service/target/
+/datingapp-login-service/target/
+/datingapp-service-discovery/target/
+/.idea/
