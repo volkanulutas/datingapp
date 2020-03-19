@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2afb5777-6588-4b97-bace-f0913a9b7bf9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/datingapp-auth-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-auth-service/src/main/java/com/datingapp/auth/AuthApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-auth-service/src/test/java/com/datingapp/auth/AuthApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-chat-service/src/main/resources/static/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-chat-service/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-chat-service/src/main/resources/static/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-game-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-game-service/src/main/java/com/datingapp/game/GameApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-game-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-game-service/src/test/java/com/datingapp/game/GameApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-login-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-login-service/src/main/java/com/datingapp/login/LoginApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-login-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-login-service/src/test/java/com/datingapp/login/LoginApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-service-discovery/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-service-discovery/src/main/java/com/datingapp/servicediscovery/ServiceDiscoveryApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-service-discovery/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datingapp-service-discovery/src/test/java/com/datingapp/servicediscovery/ServiceDiscoveryApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datingapp-chat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/WebsocketDemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/config/WebSocketConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/controller/ChatController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/controller/WebSocketEventListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/datingapp/chat/model/ChatMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/datingapp/chat/WebsocketDemoApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZMQgee2figFBeFSTOXW9B4v4sm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/spring-security-with-zuul-master" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.datingapp.servicediscovery" />
+      <recent name="com.datingapp.login" />
+      <recent name="com.datingapp.game" />
+      <recent name="com.datingapp.auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/datingapp-chat-service/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2afb5777-6588-4b97-bace-f0913a9b7bf9" name="Default Changelist" comment="" />
+      <created>1584646595875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584646595875</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

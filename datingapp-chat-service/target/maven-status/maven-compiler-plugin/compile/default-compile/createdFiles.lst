@@ -1,0 +1,6 @@
+com/datingapp/chat/model/ChatMessage$MessageType.class
+com/datingapp/chat/controller/WebSocketEventListener.class
+com/datingapp/chat/config/WebSocketConfig.class
+com/datingapp/chat/controller/ChatController.class
+com/datingapp/chat/ChatApplication.class
+com/datingapp/chat/model/ChatMessage.class
