@@ -22,6 +22,7 @@ import java.util.Date;
 import java.util.Objects;
 
 import com.datingapp.auth.constants.ErrorMessage.TokenInvalid;
+
 import static com.datingapp.auth.constants.SecurityConstants.AUTHORIZATION_HEADER;
 import static com.datingapp.auth.constants.SecurityConstants.BEARER_PREFIX;
 

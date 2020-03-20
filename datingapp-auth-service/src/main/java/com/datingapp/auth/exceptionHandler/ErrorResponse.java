@@ -1,8 +1,5 @@
 package com.datingapp.auth.exceptionHandler;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
 /**

@@ -1,8 +1,5 @@
 package com.datingapp.auth.responseDTO;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,7 +9,7 @@ import java.util.List;
  * @author smriti on 6/27/19
  */
 
-public class AdminResponseDTO implements Serializable{
+public class AdminResponseDTO implements Serializable {
 
     private Long id;
 

@@ -2,7 +2,7 @@ package com.datingapp.login.constants;
 
 /**
  * Datingapp on 20.03.2020
- *
+ * <p>
  * THIS CLASS INCLUDES ALL THE API END POINTS
  * NOTE: WRITE EVERYTHING IN ALPHABETICAL ORDER
  *

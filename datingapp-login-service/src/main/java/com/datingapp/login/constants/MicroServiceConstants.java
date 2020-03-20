@@ -3,7 +3,7 @@ package com.datingapp.login.constants;
 
 /**
  * Datingapp on 20.03.2020
- *
+ * <p>
  * This class includes the name and API end points of other microservices that we need to communicate.
  * NOTE: WRITE EVERYTHING IN ALPHABETICAL ORDER
  *

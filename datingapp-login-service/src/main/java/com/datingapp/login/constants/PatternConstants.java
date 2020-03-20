@@ -2,7 +2,7 @@ package com.datingapp.login.constants;
 
 /**
  * Datingapp on 20.03.2020
- *
+ * <p>
  * THIS CLASS INCLUDES REGEX PATTERNS
  *
  * @author volkanulutas
@@ -21,7 +21,7 @@ public class PatternConstants {
         String PATTERN_REGEX_FOR_WINDOWS = "[0-9a-f]+-[0-9a-f]+-[0-9a-f]+-[0-9a-f]+-[0-9a-f]+-[0-9a-f]+";
     }
 
-    public interface EmailConstants{
+    public interface EmailConstants {
         String EMAIL_PATTERN = "^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$";
     }
 }

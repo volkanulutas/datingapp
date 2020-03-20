@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 
 /**
  * Datingapp on 20.03.2020
- *
+ * <p>
  * THIS CLASS GIVES NETWORK INFORMATION(IP ADDRESSS AND MAC ADDRESS) OF CLIENT AND SERVER
  *
  * @author volkanulutas
@@ -38,7 +38,7 @@ public class NetworkUtils {
         a broadcast packet, it is sent to a special MAC address that causes all machines on the network to receive it.*/
         String[] cmd;
         if (OS.contains("win")) {
-           /*For Windows*/
+            /*For Windows*/
             macpt = Pattern.compile(NetworkConstants.PATTERN_REGEX_FOR_WINDOWS);
             String[] a = {NetworkConstants.ARP, NetworkConstants.ARP_A, ip};
             cmd = a;
@@ -116,7 +116,7 @@ public class NetworkUtils {
 
                         byte[] mac = networkInterface.getHardwareAddress();
 
-                    /*CONVERT mac(IN DECIMAL FORMAT) TO HEXADECIMAL FORMAT */
+                        /*CONVERT mac(IN DECIMAL FORMAT) TO HEXADECIMAL FORMAT */
                         for (int i = 0; i < mac.length; i++) {
                             sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));
                             network.setMacAddress(sb.toString());

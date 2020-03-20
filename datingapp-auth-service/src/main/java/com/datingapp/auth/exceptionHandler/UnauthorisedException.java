@@ -1,7 +1,5 @@
 package com.datingapp.auth.exceptionHandler;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
 /**
@@ -20,6 +18,14 @@ public class UnauthorisedException extends RuntimeException {
         errorResponse.setDeveloperMsg(developerMessage);
         errorResponse.setErrorMsg(message);
         errorResponse.setStatus(HttpStatus.UNAUTHORIZED);
+    }
+
+    public ErrorResponse getErrorResponse() {
+        return errorResponse;
+    }
+
+    public void setErrorResponse(ErrorResponse errorResponse) {
+        this.errorResponse = errorResponse;
     }
 }
 

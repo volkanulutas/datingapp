@@ -12,23 +12,23 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class JwtProperties {
 
-	private String secretKey;
+    private String secretKey;
 
-	private long validityInMilliseconds;
+    private long validityInMilliseconds;
 
-	public String getSecretKey() {
-		return secretKey;
-	}
+    public String getSecretKey() {
+        return secretKey;
+    }
 
-	public void setSecretKey(String secretKey) {
-		this.secretKey = secretKey;
-	}
+    public void setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+    }
 
-	public long getValidityInMilliseconds() {
-		return validityInMilliseconds;
-	}
+    public long getValidityInMilliseconds() {
+        return validityInMilliseconds;
+    }
 
-	public void setValidityInMilliseconds(long validityInMilliseconds) {
-		this.validityInMilliseconds = validityInMilliseconds;
-	}
+    public void setValidityInMilliseconds(long validityInMilliseconds) {
+        this.validityInMilliseconds = validityInMilliseconds;
+    }
 }
