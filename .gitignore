@@ -4,4 +4,5 @@
 /datingapp-game-service/target/
 /datingapp-login-service/target/
 /datingapp-service-discovery/target/
+/datingapp-config-server/target/
 /.idea/
