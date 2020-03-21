@@ -29,6 +29,7 @@
         <module>datingapp-login-service</module>
         <module>datingapp-service-discovery</module>
         <module>datingapp-config-server</module>
+        <module>datingapp-auth-demo</module>
     </modules>
 
     <build>

@@ -5,4 +5,5 @@
 /datingapp-login-service/target/
 /datingapp-service-discovery/target/
 /datingapp-config-server/target/
+/datingapp-auth-demo/target
 /.idea/
