@@ -6,9 +6,10 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author smriti on 6/27/19
+ * Datingapp on 19.03.2020
+ *
+ * @author volkanulutas
  */
-
 public class AdminResponseDTO implements Serializable {
 
     private Long id;

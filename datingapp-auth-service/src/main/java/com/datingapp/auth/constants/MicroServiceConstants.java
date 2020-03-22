@@ -7,9 +7,9 @@ package com.datingapp.auth.constants;
  */
 public class MicroServiceConstants {
 
-    public static final String LOGIN_MICROSERVICE = "/login-service/api/login";
+    public static final String LOGIN_MICROSERVICE = "/datingapp-login-service/api/login";
 
-    public static final String ADMIN_MICROSERVICE = "admin-service";
+    public static final String ADMIN_MICROSERVICE = "datingapp-auth-demo";
     public static final String BASE_API = "/api";
 
     public interface AdminMicroServiceConstants {

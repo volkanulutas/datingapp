@@ -1,6 +1,6 @@
 package com.datingapp.authdemo.exceptionHandler;
 
-<<<<<<< HEAD:admin-service/src/main/java/com/cogent/adminservice/exceptionHandler/GlobalExceptionHandler.java:admin-service/src/main/java/com/cogent/adminservice/exceptionHandler/GlobalExceptionHandler.java
+<<<<<<< HEAD:datingapp-auth-demo/src/main/java/com/cogent/adminservice/exceptionHandler/GlobalExceptionHandler.java:admin-service/src/main/java/com/cogent/adminservice/exceptionHandler/GlobalExceptionHandler.java
 import com.datingapp.authdemo.exceptions.ErrorResponse;
 import com.datingapp.authdemo.exceptions.NoContentFoundException;
 import com.datingapp.authdemo.exceptions.UnauthorisedException;
