@@ -1,4 +1,4 @@
-package com.datingapp.game.data;
+package com.datingapp.game.data.dto;
 
 /**
  * Created on 21.03.2020
@@ -6,5 +6,5 @@ package com.datingapp.game.data;
  * @author onurcanyozgat
  */
 
-public class Score {
+public class ScoreDto {
 }

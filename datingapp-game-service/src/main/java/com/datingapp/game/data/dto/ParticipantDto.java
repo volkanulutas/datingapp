@@ -1,4 +1,4 @@
-package com.datingapp.game.data;
+package com.datingapp.game.data.dto;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import java.util.List;
  * @author onurcanyozgat
  */
 
-public class Participant {
+public class ParticipantDto {
 
     private int id;
     private String nickname;
-    private List<ParticipantFeature> featureList;
+    private List<ParticipantFeatureDto> featureList;
 
 }
