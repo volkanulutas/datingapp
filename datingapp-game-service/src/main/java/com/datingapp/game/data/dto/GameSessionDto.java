@@ -10,16 +10,25 @@ import java.util.List;
 
 public class GameSessionDto {
 
-    private List<ParticipantDto> participants;
+    private ParticipantDto firstParticipant;
+    private ParticipantDto secondParticipant;
     private List<QuestionDto> questions;
     private ScoreDto score;
 
-    public List<ParticipantDto> getParticipants() {
-        return participants;
+    public ParticipantDto getFirstParticipant() {
+        return firstParticipant;
     }
 
-    public void setParticipants(List<ParticipantDto> participants) {
-        this.participants = participants;
+    public void setFirstParticipant(ParticipantDto firstParticipant) {
+        this.firstParticipant = firstParticipant;
+    }
+
+    public ParticipantDto getSecondParticipant() {
+        return secondParticipant;
+    }
+
+    public void setSecondParticipant(ParticipantDto secondParticipant) {
+        this.secondParticipant = secondParticipant;
     }
 
     public List<QuestionDto> getQuestions() {

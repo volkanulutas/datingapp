@@ -9,6 +9,7 @@ package com.datingapp.game.data.entity;
 public class ParticipantEntity {
 
     private long id;
+    private long userId;
     private String nickname;
 
     public long getId() {
@@ -17,6 +18,14 @@ public class ParticipantEntity {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     public String getNickname() {

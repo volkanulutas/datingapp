@@ -10,7 +10,6 @@ import java.util.List;
 
 public class ParticipantDto {
 
-    private int id;
     private String nickname;
     private List<ParticipantFeatureDto> featureList;
 
