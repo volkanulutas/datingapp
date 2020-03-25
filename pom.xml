@@ -23,9 +23,15 @@
     </properties>
 
     <modules>
+        <module>datingapp-apigateway-service</module>
+        <module>datingapp-service-discovery</module>
+        <module>datingapp-config-server</module>
+        <module>datingapp-auth-service</module>
+        <module>datingapp-demo1-service</module>
+
         <module>datingapp-chat-service</module>
         <module>datingapp-game-service</module>
-        <module>datingapp-config-server</module>
+
     </modules>
 
     <build>
