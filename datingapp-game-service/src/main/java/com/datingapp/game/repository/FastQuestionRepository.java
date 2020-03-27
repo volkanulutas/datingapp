@@ -1,15 +1,14 @@
 package com.datingapp.game.repository;
 
-import com.datingapp.game.data.entity.ParticipantEntity;
+import com.datingapp.game.data.entity.FastQuestionEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created on 24.03.2020
+ * Created on 27.03.2020
  *
  * @author onurcanyozgat
  */
-
 @Repository
-public interface ParticipantRepository extends JpaRepository<ParticipantEntity, Long> {
+public interface FastQuestionRepository extends JpaRepository<FastQuestionEntity, Long> {
 }

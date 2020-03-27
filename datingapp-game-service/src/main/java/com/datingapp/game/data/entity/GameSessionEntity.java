@@ -1,23 +1,26 @@
 package com.datingapp.game.data.entity;
 
+import javax.persistence.Entity;
+import java.util.List;
+
 /**
  * Created on 21.03.2020
  *
  * @author onurcanyozgat
  */
+@Entity(name = "GAME_SESSION_ENTITY")
+public class GameSessionEntity extends BaseEntity {
 
-public class GameSessionEntity {
-
-    private long id;
+    private List<FastQuestionEntity> questions;
     private long firstParticipantId;
     private long secondParticipantId;
 
-    public long getId() {
-        return id;
+    public List<FastQuestionEntity> getQuestions() {
+        return questions;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setQuestions(List<FastQuestionEntity> questions) {
+        this.questions = questions;
     }
 
     public long getFirstParticipantId() {

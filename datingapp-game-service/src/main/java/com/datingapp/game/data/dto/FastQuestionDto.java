@@ -6,7 +6,7 @@ package com.datingapp.game.data.dto;
  * @author onurcanyozgat
  */
 
-public class QuestionDto {
+public class FastQuestionDto extends BaseDto {
 
     private String questionContent;
     private AnswerDto firstAnswer;

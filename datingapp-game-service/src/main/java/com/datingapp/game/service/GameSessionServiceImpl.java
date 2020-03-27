@@ -1,10 +1,10 @@
 package com.datingapp.game.service;
 
+import com.datingapp.game.converter.GameSessionConverter;
 import com.datingapp.game.data.dto.GameSessionDto;
 import com.datingapp.game.data.dto.GameSessionInitiateDto;
-import com.datingapp.game.repository.ParticipantRepository;
+import com.datingapp.game.repository.GameSessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,12 +16,22 @@ import org.springframework.stereotype.Service;
 public class GameSessionServiceImpl implements GameSessionService {
 
     @Autowired
-    private ParticipantRepository participantRepository;
+    private FastQuestionService questionService;
+
+    @Autowired
+    private GameSessionRepository gameSessionRepository;
+
+    @Autowired
+    private GameSessionConverter gameSessionConverter;
 
     @Override
     public GameSessionDto initiateGameSession(GameSessionInitiateDto gameSessionInitiateDto) {
+        GameSessionDto gameSessionDto = new GameSessionDto();
+        gameSessionDto.setFirstParticipant(gameSessionInitiateDto.getFirstParticipant());
+        gameSessionDto.setSecondParticipant(gameSessionInitiateDto.getSecondParticipant());
+        gameSessionDto.setQuestions(questionService.getRandomQuestions(5));
 
-
-        return null;
+        gameSessionRepository.save(gameSessionConverter.toEntity(gameSessionDto));
+        return gameSessionDto;
     }
 }

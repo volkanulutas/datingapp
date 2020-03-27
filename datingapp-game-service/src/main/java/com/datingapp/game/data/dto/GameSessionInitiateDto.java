@@ -11,8 +11,8 @@ import com.datingapp.game.data.EnumGameType;
 public class GameSessionInitiateDto {
 
     private EnumGameType gameType;
-    private long firstUserId;
-    private long secondUserId;
+    private ParticipantDto firstParticipant;
+    private ParticipantDto secondParticipant;
 
     public EnumGameType getGameType() {
         return gameType;
@@ -22,19 +22,19 @@ public class GameSessionInitiateDto {
         this.gameType = gameType;
     }
 
-    public long getFirstUserId() {
-        return firstUserId;
+    public ParticipantDto getFirstParticipant() {
+        return firstParticipant;
     }
 
-    public void setFirstUserId(long firstUserId) {
-        this.firstUserId = firstUserId;
+    public void setFirstParticipant(ParticipantDto firstParticipant) {
+        this.firstParticipant = firstParticipant;
     }
 
-    public long getSecondUserId() {
-        return secondUserId;
+    public ParticipantDto getSecondParticipant() {
+        return secondParticipant;
     }
 
-    public void setSecondUserId(long secondUserId) {
-        this.secondUserId = secondUserId;
+    public void setSecondParticipant(ParticipantDto secondParticipant) {
+        this.secondParticipant = secondParticipant;
     }
 }

@@ -6,19 +6,10 @@ package com.datingapp.game.data.entity;
  * @author onurcanyozgat
  */
 
-public class QuestionEntity {
+public class FastQuestionEntity extends BaseEntity {
 
-    private long id;
     private long gameSessionId;
     private String content;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public long getGameSessionId() {
         return gameSessionId;

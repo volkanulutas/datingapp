@@ -6,19 +6,10 @@ package com.datingapp.game.data.entity;
  * @author onurcanyozgat
  */
 
-public class ParticipantEntity {
+public class ParticipantEntity extends BaseEntity {
 
-    private long id;
     private long userId;
     private String nickname;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public long getUserId() {
         return userId;

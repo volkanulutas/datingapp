@@ -8,11 +8,11 @@ import java.util.List;
  * @author onurcanyozgat
  */
 
-public class GameSessionDto {
+public class GameSessionDto extends BaseDto {
 
     private ParticipantDto firstParticipant;
     private ParticipantDto secondParticipant;
-    private List<QuestionDto> questions;
+    private List<FastQuestionDto> questions;
     private ScoreDto score;
 
     public ParticipantDto getFirstParticipant() {
@@ -31,11 +31,11 @@ public class GameSessionDto {
         this.secondParticipant = secondParticipant;
     }
 
-    public List<QuestionDto> getQuestions() {
+    public List<FastQuestionDto> getQuestions() {
         return questions;
     }
 
-    public void setQuestions(List<QuestionDto> questions) {
+    public void setQuestions(List<FastQuestionDto> questions) {
         this.questions = questions;
     }
 
