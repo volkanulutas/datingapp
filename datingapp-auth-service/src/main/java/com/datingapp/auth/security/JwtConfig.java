@@ -1,16 +1,14 @@
 package com.datingapp.auth.security;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-// To use this class outside. You have to 
-	// 1. Define it as a bean, either by adding @Component or use @Bean to instantiate an object from it
-	// 2. Use the @Autowire to ask spring to auto create it for you, and inject all the values.
-
-// So, If you tried to create an instance manually (i.e. new JwtConfig()). This won't inject all the values. 
-	// Because you didn't ask Spring to do so (it's done by you manually!).
-// Also, if, at any time, you tried to instantiate an object that's not defined as a bean
-	// Don't expect Spring will autowire the fields inside that class object.
-
+/**
+ * Created on 28.03.2020
+ *
+ * @author volkanulutas
+ */
+@Component
 public class JwtConfig {
 
    // Spring doesn't inject/autowire to "static" fields.
@@ -25,10 +23,10 @@ public class JwtConfig {
    private String prefix;
 
    @Value("${security.jwt.expiration:#{24*60*60}}")
-   private int expiration;
+   private int validityInMilliseconds;
 
    @Value("${security.jwt.secret:JwtSecretKey}")
-   private String secret;
+   private String secretKey;
 
    // In case you want to use plain getters instead of lombok.
    public String getUri() {
@@ -43,12 +41,12 @@ public class JwtConfig {
        return prefix;
    }
 
-   public int getExpiration() {
-       return expiration;
+   public int getValidityInMilliseconds() {
+       return validityInMilliseconds;
    }
 
-   public String getSecret() {
-       return secret;
+   public String getSecretKey() {
+       return secretKey;
    }
 
    @Override
@@ -57,8 +55,8 @@ public class JwtConfig {
               "Uri='" + Uri + '\'' +
               ", header='" + header + '\'' +
               ", prefix='" + prefix + '\'' +
-              ", expiration=" + expiration +
-              ", secret='" + secret + '\'' +
+              ", expiration=" + validityInMilliseconds +
+              ", secret='" + secretKey + '\'' +
               '}';
    }
 }

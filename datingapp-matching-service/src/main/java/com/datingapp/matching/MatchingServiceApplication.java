@@ -1,9 +1,9 @@
-package com.datingapp.apigateway;
+package com.datingapp.matching;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * Created on 28.03.2020
@@ -12,10 +12,10 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@EnableZuulProxy
-public class ApiGatewayApplication {
+@EnableCircuitBreaker
+public class MatchingServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApiGatewayApplication.class, args);
+		SpringApplication.run(MatchingServiceApplication.class, args);
 	}
 }

@@ -9,9 +9,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * Created on 28.03.2020
+ *
+ * @author volkanulutas
+ */
 @SpringBootApplication
-@EnableEurekaClient 		// Enable eureka client.
-@EnableCircuitBreaker 	// Enable circuit breakers
+@EnableEurekaClient
+@EnableCircuitBreaker
 public class Demo1ServiceApplication {
 
 	public static void main(String[] args) {

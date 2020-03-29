@@ -8,7 +8,7 @@ import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.stereotype.Controller;
 
 /**
- * Datingapp on 19.03.2020
+ * Created on 28.03.2020
  *
  * @author volkanulutas
  */

@@ -1,7 +1,7 @@
 package com.datingapp.chat.model;
 
 /**
- * Datingapp on 19.03.2020
+ * Created on 28.03.2020
  *
  * @author volkanulutas
  */

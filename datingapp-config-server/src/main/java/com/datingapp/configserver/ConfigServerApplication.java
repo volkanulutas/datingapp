@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
- * Datingapp on 19.03.2020
+ * Created on 28.03.2020
  *
  * @author volkanulutas
  */
