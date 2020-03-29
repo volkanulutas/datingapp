@@ -2,9 +2,11 @@ package com.datingapp.apigateway.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import javax.servlet.FilterChain;
@@ -15,13 +17,17 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class JwtTokenAuthenticationFilter extends  OncePerRequestFilter {
-    
-	private final JwtConfig jwtConfig;
-	
-	public JwtTokenAuthenticationFilter(JwtConfig jwtConfig) {
-		this.jwtConfig = jwtConfig;
-	}
+
+/**
+ * Created on 28.03.2020
+ *
+ * @author volkanulutas
+ */
+@Component
+public class JwtTokenAuthenticationFilter extends OncePerRequestFilter {
+
+	@Autowired
+	private JwtConfig jwtConfig;
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
@@ -77,5 +83,4 @@ public class JwtTokenAuthenticationFilter extends  OncePerRequestFilter {
 		// go to the next filter in the filter chain
 		chain.doFilter(request, response);
 	}
-
 }
