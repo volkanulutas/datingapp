@@ -12,6 +12,10 @@ import java.util.List;
 
 public interface FastQuestionService {
 
+    FastQuestionDto save(FastQuestionDto dto);
+
+    List<FastQuestionDto> saveAll(List<FastQuestionDto> dtoList);
+
     FastQuestionDto findById(Long id);
 
     List<FastQuestionDto> getRandomQuestions(int number);

@@ -1,6 +1,7 @@
 package com.datingapp.game.data.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
@@ -11,8 +12,11 @@ import java.util.List;
 @Entity(name = "GAME_SESSION_ENTITY")
 public class GameSessionEntity extends BaseEntity {
 
+    @OneToMany(mappedBy = "")
     private List<FastQuestionEntity> questions;
+
     private long firstParticipantId;
+
     private long secondParticipantId;
 
     public List<FastQuestionEntity> getQuestions() {
