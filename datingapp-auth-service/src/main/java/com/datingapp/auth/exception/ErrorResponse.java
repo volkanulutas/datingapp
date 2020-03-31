@@ -1,5 +1,6 @@
 package com.datingapp.auth.exception;
 
+import lombok.*;
 import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;
@@ -9,6 +10,12 @@ import java.io.Serializable;
  *
  * @author volkanulutas
  */
+@Getter
+@Setter
+@Data
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class ErrorResponse implements Serializable {
 
     private String errorMsg;
@@ -18,48 +25,6 @@ public class ErrorResponse implements Serializable {
     private HttpStatus responseStatus;
 
     private int responseCode;
-
-    public ErrorResponse() {
-    }
-
-    public ErrorResponse(String errorMsg, String developerMsg, HttpStatus responseStatus, int responseCode) {
-        this.errorMsg = errorMsg;
-        this.developerMsg = developerMsg;
-        this.responseStatus = responseStatus;
-        this.responseCode = responseCode;
-    }
-
-    public String getErrorMsg() {
-        return errorMsg;
-    }
-
-    public void setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
-    }
-
-    public String getDeveloperMsg() {
-        return developerMsg;
-    }
-
-    public void setDeveloperMsg(String developerMsg) {
-        this.developerMsg = developerMsg;
-    }
-
-    public HttpStatus getResponseStatus() {
-        return responseStatus;
-    }
-
-    public void setResponseStatus(HttpStatus responseStatus) {
-        this.responseStatus = responseStatus;
-    }
-
-    public int getResponseCode() {
-        return responseCode;
-    }
-
-    public void setResponseCode(int responseCode) {
-        this.responseCode = responseCode;
-    }
 }
 
 

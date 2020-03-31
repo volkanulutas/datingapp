@@ -1,10 +1,17 @@
-package com.datingapp.auth.data.entity;
+package com.datingapp.matching.data.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
 
+/**
+ * Created on 28.03.2020
+ *
+ * @author volkanulutas
+ */
 @Getter
 @Setter
 @NoArgsConstructor

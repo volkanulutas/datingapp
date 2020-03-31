@@ -17,4 +17,6 @@ public interface UserService {
     Optional<AppUser> findUserByUsername(String username);
 
     List<AppUser> getAllUser();
+
+    List<AppUser>getAvailableMatchingUser();
 }

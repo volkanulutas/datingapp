@@ -1,4 +1,4 @@
-package com.datingapp.auth.data.entity;
+package com.datingapp.auth.data.common;
 
 public enum EnumUserGender {
     MALE,

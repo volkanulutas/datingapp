@@ -9,7 +9,7 @@ import com.datingapp.auth.data.entity.AppUser;
  * @author volkanulutas
  */
 @Converter
-public class AppUserConverter extends BaseConverter<AppUserDto, AppUser> {
+public class UserConverter extends BaseConverter<AppUserDto, AppUser> {
 
     @Override
     public AppUserDto toDto(AppUser entity) {

@@ -1,9 +1,9 @@
-package com.datingapp.auth.data.entity;
+package com.datingapp.matching.data.entity;
 
 
-import com.datingapp.auth.data.common.EnumUserGender;
-import com.datingapp.auth.data.common.EnumUserRole;
-import com.datingapp.auth.data.common.EnumUserStatus;
+import com.datingapp.matching.data.common.EnumUserGender;
+import com.datingapp.matching.data.common.EnumUserRole;
+import com.datingapp.matching.data.common.EnumUserStatus;
 
 import java.io.Serializable;
 

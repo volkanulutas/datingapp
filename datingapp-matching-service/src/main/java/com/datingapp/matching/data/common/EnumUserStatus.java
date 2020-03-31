@@ -1,4 +1,7 @@
-package com.datingapp.auth.data.entity;
+package com.datingapp.matching.data.common;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created on 28.03.2020
@@ -14,15 +17,7 @@ public enum EnumUserStatus {
 
     private String value;
 
-    EnumUserStatus(String value ) {
-        this.value = value;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
+    EnumUserStatus(String value) {
         this.value = value;
     }
 }

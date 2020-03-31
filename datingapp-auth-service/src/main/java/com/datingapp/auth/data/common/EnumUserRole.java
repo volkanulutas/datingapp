@@ -1,4 +1,4 @@
-package com.datingapp.auth.data.entity;
+package com.datingapp.auth.data.common;
 
 /**
  * Created on 28.03.2020

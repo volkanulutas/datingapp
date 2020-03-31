@@ -6,7 +6,5 @@ package com.datingapp.auth.constant;
  * @author volkanulutas
  */
 public class WebResourceConstants {
-    public static final String LOGIN_REST_SERVICE = "/login";
-
     public static final String SIGNUP_REST_SERVICE = "/sigunp";
 }
