@@ -1,9 +1,12 @@
 package com.datingapp.auth.data.entity;
 
+
 import lombok.*;
+
 import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
+
 
 @Getter
 @Setter

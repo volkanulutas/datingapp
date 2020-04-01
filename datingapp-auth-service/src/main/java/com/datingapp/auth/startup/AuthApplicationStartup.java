@@ -1,7 +1,8 @@
 package com.datingapp.auth.startup;
 
-import com.datingapp.auth.data.entity.AppUser;
 import com.datingapp.auth.data.common.EnumUserRole;
+import com.datingapp.auth.data.entity.AppUser;
+
 import com.datingapp.auth.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,6 +1,7 @@
 package com.datingapp.auth.exception;
 
 import lombok.*;
+
 import org.springframework.http.HttpStatus;
 
 import java.io.Serializable;

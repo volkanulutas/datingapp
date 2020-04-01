@@ -7,21 +7,11 @@ import lombok.*;
  *
  * @author volkanulutas
  */
-@Getter
-@Setter
 @Data
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class UnauthorisedException extends RuntimeException {
     private ErrorResponse errorResponse;
-
-    public ErrorResponse getErrorResponse() {
-        return errorResponse;
-    }
-
-    public void setErrorResponse(ErrorResponse errorResponse) {
-        this.errorResponse = errorResponse;
-    }
 }
 
