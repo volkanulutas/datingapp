@@ -19,15 +19,11 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
 
     @Autowired
-    private AppUserConverter appUserConverter;
-
-    @Autowired
     private UserService userService;
 
     @PostMapping(path = "/signup", consumes = "application/json", produces = "application/json")
     public ResponseEntity<AppUserDto> signup(@RequestBody AppUserDto userDTO) {
-        AppUser appUser = appUserConverter.toEntity(userDTO);
-        AppUser user = userService.createUser(appUser).orElse(null);
-        return (user == null) ? new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR) : new ResponseEntity<>(appUserConverter.toDto(user), HttpStatus.OK);
+        AppUserDto user = userService.createUser(userDTO).get();
+        return (user == null) ? new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR) : new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
 }

@@ -1,5 +1,6 @@
 package com.datingapp.auth.service;
 
+import com.datingapp.auth.data.dto.AppUserDto;
 import com.datingapp.auth.data.entity.AppUser;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.Optional;
  */
 public interface UserService {
 
-    Optional<AppUser> createUser(AppUser user);
+    Optional<AppUserDto> createUser(AppUserDto user);
 
     Optional<AppUser> findUserByUsername(String username);
 
