@@ -1,9 +1,6 @@
 package com.datingapp.auth.exception;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * Created on 28.03.2020

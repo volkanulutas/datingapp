@@ -24,9 +24,6 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    private UserConverter appUserConverter;
-
-    @Autowired
     private MatchingUserConverter appUserMatchingConverter;
 
     @Autowired
@@ -34,10 +31,9 @@ public class UserController {
 
     @PostMapping(path = "/signup", consumes = "application/json", produces = "application/json")
     public ResponseEntity<AppUserDto> signup(@RequestBody AppUserDto userDTO) {
-        AppUser appUser = appUserConverter.toEntity(userDTO);
-        AppUser user = userService.createUser(appUser).orElse(null);
+        AppUserDto user = userService.createUser(userDTO).orElse(null);
         return (user == null) ? new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR)
-                : new ResponseEntity<>(appUserConverter.toDto(user), HttpStatus.OK);
+                : new ResponseEntity<>(user, HttpStatus.OK);
     }
 
     @GetMapping(value = "")

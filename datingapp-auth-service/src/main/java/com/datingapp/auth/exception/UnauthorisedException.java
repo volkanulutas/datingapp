@@ -12,6 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UnauthorisedException extends RuntimeException {
+
     private ErrorResponse errorResponse;
 }
 

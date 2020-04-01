@@ -9,7 +9,6 @@ import lombok.Setter;
  * @author volkanulutas
  */
 @Getter
-@Setter
 public enum EnumUserStatus {
     BLOCKED("Blocked User by Application"),
     BLOCKED_BY_LOGIN_ATTEMPT("Blocked User by login attempt"),

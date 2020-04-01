@@ -1,8 +1,10 @@
 package com.datingapp.auth.service;
 
 import com.datingapp.auth.constant.ErrorMessageConstants;
+import com.datingapp.auth.converter.AppUserConverter;
 import com.datingapp.auth.data.dto.AppUserDto;
 import com.datingapp.auth.data.entity.AppUser;
+import com.datingapp.auth.exception.ErrorResponse;
 import com.datingapp.auth.exception.SignupException;
 import com.datingapp.auth.repository.UserRepository;
 import org.slf4j.Logger;
@@ -34,13 +36,14 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
-    public Optional<AppUserDto> createUser(AppUser user) {
+    public Optional<AppUserDto> createUser(AppUserDto user) {
         AppUser appUser = findUserByUsername(user.getUsername()).orElse(appUserConverter.toEntity(user));
         String encodedPassword = encoder.encode(appUser.getPassword());
         appUser.setPassword(encodedPassword);
         AppUser savedUser = userRepository.save(appUser);
         AppUserDto appUserDto = Optional.of(appUserConverter.toDto(savedUser)).orElseThrow(
-                () -> new SignupException(ErrorMessageConstants.SingupErrorMessage.MESSAGE, ErrorMessageConstants.SingupErrorMessage.DEVELOPER_MESSAGE));
+                () -> new SignupException(new ErrorResponse(ErrorMessageConstants.SingupErrorMessage.MESSAGE,
+                        ErrorMessageConstants.SingupErrorMessage.DEVELOPER_MESSAGE)));
         return Optional.of(appUserDto);
     }
 

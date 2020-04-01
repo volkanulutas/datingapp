@@ -11,8 +11,6 @@ import java.io.Serializable;
  *
  * @author volkanulutas
  */
-@Getter
-@Setter
 @Data
 @ToString
 @NoArgsConstructor
@@ -26,6 +24,11 @@ public class ErrorResponse implements Serializable {
     private HttpStatus responseStatus;
 
     private int responseCode;
+
+    public ErrorResponse(String errorMsg, String developerMsg) {
+        this.errorMsg = errorMsg;
+        this.developerMsg = developerMsg;
+    }
 }
 
 

@@ -1,8 +1,7 @@
 package com.datingapp.auth.startup;
 
 import com.datingapp.auth.data.common.EnumUserRole;
-import com.datingapp.auth.data.entity.AppUser;
-
+import com.datingapp.auth.data.dto.AppUserDto;
 import com.datingapp.auth.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,8 +24,8 @@ public class AuthApplicationStartup {
 
     @EventListener
     public void applicationInitialized(ApplicationReadyEvent event) {
-        userService.createUser(new AppUser("volkan", "12345", EnumUserRole.USER));
-        userService.createUser(new AppUser("onurcan", "12345", EnumUserRole.USER));
-        userService.createUser(new AppUser("admin", "12345", EnumUserRole.ADMIN));
+        userService.createUser(new AppUserDto("admin", "12345", EnumUserRole.ADMIN));
+        userService.createUser(new AppUserDto("volkan", "12345", EnumUserRole.USER));
+        userService.createUser(new AppUserDto("onurcan", "12345", EnumUserRole.USER));
     }
 }

@@ -4,7 +4,9 @@ package com.datingapp.auth.data.entity;
 import com.datingapp.auth.data.common.EnumUserGender;
 import com.datingapp.auth.data.common.EnumUserRole;
 import com.datingapp.auth.data.common.EnumUserStatus;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 
@@ -17,6 +19,8 @@ import java.io.Serializable;
  */
 @Data
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class AppUser extends BaseEntity implements Serializable {
 
     private String username;
@@ -38,7 +42,6 @@ public class AppUser extends BaseEntity implements Serializable {
     private Integer loginAttempt;
 
     private EnumUserStatus status;
-
 
     private EnumUserGender gender;
 }

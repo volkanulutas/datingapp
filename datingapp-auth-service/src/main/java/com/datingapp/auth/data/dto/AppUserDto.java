@@ -6,8 +6,6 @@ import com.datingapp.auth.data.common.EnumUserStatus;
 import lombok.*;
 
 
-
-
 import java.io.Serializable;
 
 /**
@@ -18,7 +16,6 @@ import java.io.Serializable;
 @Data
 @ToString
 @NoArgsConstructor
-@AllArgsConstructor
 public class AppUserDto extends BaseDto implements Serializable {
 
     public String id;
@@ -44,4 +41,10 @@ public class AppUserDto extends BaseDto implements Serializable {
     private EnumUserStatus status;
 
     private EnumUserGender gender;
+
+    public AppUserDto(String username, String password, EnumUserRole userRole) {
+        this.username = username;
+        this.password = password;
+        this.userRole = userRole;
+    }
 }
