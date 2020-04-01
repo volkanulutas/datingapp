@@ -1,6 +1,10 @@
 package com.datingapp.auth.service;
 
+import com.datingapp.auth.constant.ErrorMessageConstants;
+import com.datingapp.auth.converter.AppUserConverter;
+import com.datingapp.auth.data.dto.AppUserDto;
 import com.datingapp.auth.data.entity.AppUser;
+import com.datingapp.auth.exception.SignupException;
 import com.datingapp.auth.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Supplier;
 
 /**
  * Created on 28.03.2020
@@ -21,17 +26,23 @@ public class UserServiceImpl implements UserService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
+    private AppUserConverter appUserConverter;
+
+    @Autowired
     private BCryptPasswordEncoder encoder;
 
     @Autowired
     private UserRepository userRepository;
 
     @Override
-    public Optional<AppUser> createUser(AppUser user) {
-        AppUser appUser = findUserByUsername(user.getUsername()).orElse(user);
+    public Optional<AppUserDto> createUser(AppUserDto user) throws RuntimeException {
+        AppUser appUser = findUserByUsername(user.getUsername()).orElse(appUserConverter.toEntity(user));
         String encodedPassword = encoder.encode(appUser.getPassword());
         appUser.setPassword(encodedPassword);
-        return Optional.of(userRepository.save(appUser));
+        AppUser savedUser = userRepository.save(appUser);
+        AppUserDto appUserDto = Optional.of(appUserConverter.toDto(savedUser)).orElseThrow(
+                () -> new SignupException(ErrorMessageConstants.SingupErrorMessage.MESSAGE, ErrorMessageConstants.SingupErrorMessage.DEVELOPER_MESSAGE));
+        return Optional.of(appUserDto);
     }
 
     @Override
