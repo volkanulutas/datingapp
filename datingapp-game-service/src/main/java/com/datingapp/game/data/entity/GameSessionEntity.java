@@ -1,7 +1,6 @@
 package com.datingapp.game.data.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
@@ -12,12 +11,26 @@ import java.util.List;
 @Entity(name = "GAME_SESSION_ENTITY")
 public class GameSessionEntity extends BaseEntity {
 
-    @OneToMany(mappedBy = "")
+    private ParticipantEntity firstParticipant;
+    private ParticipantEntity secondParticipant;
     private List<FastQuestionEntity> questions;
+    private ScoreEntity score;
 
-    private long firstParticipantId;
+    public ParticipantEntity getFirstParticipant() {
+        return firstParticipant;
+    }
 
-    private long secondParticipantId;
+    public void setFirstParticipant(ParticipantEntity firstParticipant) {
+        this.firstParticipant = firstParticipant;
+    }
+
+    public ParticipantEntity getSecondParticipant() {
+        return secondParticipant;
+    }
+
+    public void setSecondParticipant(ParticipantEntity secondParticipant) {
+        this.secondParticipant = secondParticipant;
+    }
 
     public List<FastQuestionEntity> getQuestions() {
         return questions;
@@ -27,19 +40,11 @@ public class GameSessionEntity extends BaseEntity {
         this.questions = questions;
     }
 
-    public long getFirstParticipantId() {
-        return firstParticipantId;
+    public ScoreEntity getScore() {
+        return score;
     }
 
-    public void setFirstParticipantId(long firstParticipantId) {
-        this.firstParticipantId = firstParticipantId;
-    }
-
-    public long getSecondParticipantId() {
-        return secondParticipantId;
-    }
-
-    public void setSecondParticipantId(long secondParticipantId) {
-        this.secondParticipantId = secondParticipantId;
+    public void setScore(ScoreEntity score) {
+        this.score = score;
     }
 }

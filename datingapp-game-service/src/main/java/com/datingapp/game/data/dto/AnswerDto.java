@@ -6,24 +6,25 @@ package com.datingapp.game.data.dto;
  * @author onurcanyozgat
  */
 
-public class AnswerDto {
+public class AnswerDto extends BaseDto {
 
-    private String answerContent;
-    private ParticipantDto participantDto;
+    private String content;
+    private Long participantId;
 
-    public String getAnswerContent() {
-        return answerContent;
+    public String getContent() {
+        return content;
     }
 
-    public void setAnswerContent(String answerContent) {
-        this.answerContent = answerContent;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public ParticipantDto getParticipantDto() {
-        return participantDto;
+    public Long getParticipantId() {
+        return participantId;
     }
 
-    public void setParticipantDto(ParticipantDto participantDto) {
-        this.participantDto = participantDto;
+    public void setParticipantId(Long participantId) {
+        this.participantId = participantId;
     }
+
 }

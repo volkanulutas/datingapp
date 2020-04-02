@@ -8,26 +8,8 @@ package com.datingapp.game.data.entity;
 
 public class AnswerEntity {
 
-    private long id;
-    private long questionId;
     private long participantId;
     private String content;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public long getQuestionId() {
-        return questionId;
-    }
-
-    public void setQuestionId(long questionId) {
-        this.questionId = questionId;
-    }
 
     public long getParticipantId() {
         return participantId;

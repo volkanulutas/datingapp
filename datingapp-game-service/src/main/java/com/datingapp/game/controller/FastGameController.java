@@ -2,6 +2,7 @@ package com.datingapp.game.controller;
 
 import com.datingapp.game.data.dto.GameSessionDto;
 import com.datingapp.game.data.dto.GameSessionInitiateDto;
+import com.datingapp.game.data.dto.QuestionAnsweredDto;
 import com.datingapp.game.service.GameSessionServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +31,10 @@ public class FastGameController {
             LOGGER.error("An error occurred while instantiating game session : ", e);
         }
         return gameSessionDto;
+    }
+
+    public boolean postAnswer(QuestionAnsweredDto questionAnsweredDto) {
+        return gameSessionService.saveAnswer(questionAnsweredDto);
     }
 
 }
