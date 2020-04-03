@@ -3,12 +3,14 @@ package com.datingapp.auth.service;
 import com.datingapp.auth.constant.ErrorMessageConstants;
 import com.datingapp.auth.converter.AppUserConverter;
 import com.datingapp.auth.data.dto.AppUserDto;
+import com.datingapp.auth.data.dto.matchingservice.AvailableMatchingUserDto;
 import com.datingapp.auth.data.entity.AppUser;
 import com.datingapp.auth.exception.ErrorResponse;
 import com.datingapp.auth.exception.SignupException;
 import com.datingapp.auth.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -35,6 +37,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
     @Override
     public Optional<AppUserDto> createUser(AppUserDto user) {
         AppUser appUser = findUserByUsername(user.getUsername()).orElse(appUserConverter.toEntity(user));
@@ -60,5 +65,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<AppUser> getAvailableMatchingUser() {
         return Collections.emptyList();
+    }
+
+    @Override
+    public void sendAvailableMatchingUser(AvailableMatchingUserDto dto) {
+        rabbitTemplate.convertAndSend("test1", "test1", dto);
     }
 }

@@ -1,6 +1,7 @@
 package com.datingapp.auth.service;
 
 import com.datingapp.auth.data.dto.AppUserDto;
+import com.datingapp.auth.data.dto.matchingservice.AvailableMatchingUserDto;
 import com.datingapp.auth.data.entity.AppUser;
 
 import java.util.List;
@@ -19,5 +20,8 @@ public interface UserService {
 
     List<AppUser> getAllUser();
 
-    List<AppUser>getAvailableMatchingUser();
+    List<AppUser> getAvailableMatchingUser();
+
+    void sendAvailableMatchingUser(AvailableMatchingUserDto dto);
+
 }

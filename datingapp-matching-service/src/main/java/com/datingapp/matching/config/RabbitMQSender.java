@@ -11,7 +11,7 @@ public class RabbitMQSender {
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
-    public void send(String exchange, String routingkey, BaseDto dto) {
-        rabbitTemplate.convertAndSend(exchange, routingkey, dto);
+    public void send(String exchange, String routingKey, BaseDto dto) {
+        rabbitTemplate.convertAndSend(exchange, routingKey, dto);
     }
 }
