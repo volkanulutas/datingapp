@@ -1,14 +1,16 @@
 package com.datingapp.game.data.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * Created on 21.03.2020
  *
  * @author onurcanyozgat
  */
 
+@Document("FastQuestion")
 public class FastQuestionEntity extends BaseEntity {
 
-    private Long id;
     private String questionContent;
     private AnswerEntity firstAnswer;
     private AnswerEntity secondAnswer;
@@ -37,11 +39,4 @@ public class FastQuestionEntity extends BaseEntity {
         this.secondAnswer = secondAnswer;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

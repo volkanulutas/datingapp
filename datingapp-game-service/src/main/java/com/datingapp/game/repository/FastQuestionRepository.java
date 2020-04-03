@@ -1,7 +1,7 @@
 package com.datingapp.game.repository;
 
 import com.datingapp.game.data.entity.FastQuestionEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
  * @author onurcanyozgat
  */
 @Repository
-public interface FastQuestionRepository extends JpaRepository<FastQuestionEntity, Long> {
+public interface FastQuestionRepository extends MongoRepository<FastQuestionEntity, Long> {
 }

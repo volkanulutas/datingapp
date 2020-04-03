@@ -1,6 +1,7 @@
 package com.datingapp.game.data.entity;
 
-import javax.persistence.Entity;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.List;
 
 /**
@@ -8,13 +9,15 @@ import java.util.List;
  *
  * @author onurcanyozgat
  */
-@Entity(name = "GAME_SESSION_ENTITY")
+@Document("GameSession")
 public class GameSessionEntity extends BaseEntity {
 
     private ParticipantEntity firstParticipant;
     private ParticipantEntity secondParticipant;
     private List<FastQuestionEntity> questions;
     private ScoreEntity score;
+
+
 
     public ParticipantEntity getFirstParticipant() {
         return firstParticipant;

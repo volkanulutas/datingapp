@@ -1,24 +1,18 @@
 package com.datingapp.game.data.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 /**
  * Created on 21.03.2020
  *
  * @author onurcanyozgat
  */
 
-public class ParticipantFeatureEntity {
+@Document("ParticipantFeature")
+public class ParticipantFeatureEntity extends BaseEntity {
 
-    private long id;
     private String feature;
     private long participantId;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getFeature() {
         return feature;

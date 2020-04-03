@@ -1,5 +1,7 @@
 package com.datingapp.game.data.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.List;
 
 /**
@@ -8,19 +10,11 @@ import java.util.List;
  * @author onurcanyozgat
  */
 
+@Document("Participant")
 public class ParticipantEntity extends BaseEntity {
 
-    private Long id;
     private String nickname;
     private List<ParticipantFeatureEntity> featureList;
-    
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNickname() {
         return nickname;

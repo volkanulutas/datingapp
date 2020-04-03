@@ -7,6 +7,9 @@ import com.datingapp.game.service.GameSessionServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@RequestMapping(value = "/fastGame")
 public class FastGameController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FastGameController.class);
@@ -23,7 +27,8 @@ public class FastGameController {
     @Autowired
     private GameSessionServiceImpl gameSessionService;
 
-    public GameSessionDto initiateGameSession(GameSessionInitiateDto gameSessionInitiateDto) {
+    @PostMapping(value = "/initiateGameSession")
+    public GameSessionDto initiateGameSession(@RequestBody GameSessionInitiateDto gameSessionInitiateDto) {
         GameSessionDto gameSessionDto = null;
         try {
             gameSessionDto = gameSessionService.initiateGameSession(gameSessionInitiateDto);
@@ -33,7 +38,8 @@ public class FastGameController {
         return gameSessionDto;
     }
 
-    public boolean postAnswer(QuestionAnsweredDto questionAnsweredDto) {
+    @PostMapping(value = "/saveAnswer")
+    public boolean saveAnswer(@RequestBody QuestionAnsweredDto questionAnsweredDto) {
         return gameSessionService.saveAnswer(questionAnsweredDto);
     }
 

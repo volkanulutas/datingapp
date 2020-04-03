@@ -1,5 +1,7 @@
 package com.datingapp.game.data.entity;
 
+import org.springframework.data.annotation.Id;
+
 /**
  * Created on 27.03.2020
  *
@@ -8,14 +10,14 @@ package com.datingapp.game.data.entity;
 
 public class BaseEntity {
 
-//    @Column(name = "ID")
-//    private long id;
-//
-//    public long getId() {
-//        return id;
-//    }
-//
-//    public void setId(long id) {
-//        this.id = id;
-//    }
+    @Id
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

@@ -2,13 +2,15 @@ package com.datingapp.game.data.dto;
 
 import com.datingapp.game.data.EnumGameType;
 
+import java.io.Serializable;
+
 /**
  * Created on 24.03.2020
  *
  * @author onurcanyozgat
  */
 
-public class GameSessionInitiateDto {
+public class GameSessionInitiateDto implements Serializable {
 
     private EnumGameType gameType;
     private ParticipantDto firstParticipant;
