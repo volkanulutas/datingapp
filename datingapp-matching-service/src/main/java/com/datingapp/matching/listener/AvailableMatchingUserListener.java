@@ -8,9 +8,6 @@ import org.springframework.amqp.rabbit.annotation.Queue;
 import org.springframework.amqp.rabbit.annotation.QueueBinding;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
-import sun.awt.X11.XQueryTree;
-
-import java.util.Map;
 
 @Component
 public class AvailableMatchingUserListener {

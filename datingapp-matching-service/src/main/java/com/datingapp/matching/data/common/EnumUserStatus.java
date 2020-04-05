@@ -1,8 +1,5 @@
 package com.datingapp.matching.data.common;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * Created on 28.03.2020
  *

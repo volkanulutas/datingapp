@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class JwtConfig {
 
+   @Value("${security.jwt.test1:/test1/**}")
+   private String test1Uri;
+
    // Spring doesn't inject/autowire to "static" fields.
    // Link: https://stackoverflow.com/a/6897406
    @Value("${security.jwt.uri:/auth/**}")
@@ -47,6 +50,10 @@ public class JwtConfig {
 
    public String getSecretKey() {
        return secretKey;
+   }
+
+   public String getTest1Uri() {
+      return test1Uri;
    }
 
    @Override

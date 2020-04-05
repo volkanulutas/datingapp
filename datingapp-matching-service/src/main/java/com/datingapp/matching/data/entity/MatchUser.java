@@ -1,7 +1,6 @@
-package com.datingapp.matching.data.dto;
+package com.datingapp.matching.data.entity;
 
 
-import com.datingapp.matching.data.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +18,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class PreMatchDto extends BaseDto implements Serializable {
+public class MatchUser extends BaseEntity implements Serializable {
 
     private User user;
 

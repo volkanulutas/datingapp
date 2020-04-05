@@ -19,7 +19,10 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class MatchDto extends BaseDto implements Serializable {
+public class MatchUserDto extends BaseDto implements Serializable {
+    private static final long serialVersionUID = 2100040422552005150L;
+
+    private String id;
 
     private User user;
 

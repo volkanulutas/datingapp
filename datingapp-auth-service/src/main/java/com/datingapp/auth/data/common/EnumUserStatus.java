@@ -1,7 +1,6 @@
 package com.datingapp.auth.data.common;
 
 import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Created on 28.03.2020

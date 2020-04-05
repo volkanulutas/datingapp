@@ -1,6 +1,9 @@
 package com.datingapp.auth.data.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.io.Serializable;
 
@@ -14,6 +17,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class NetworkResponseDto implements Serializable {
+    private static final long serialVersionUID = -5218117818565392033L;
 
     private String ipAddress;
 

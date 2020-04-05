@@ -57,6 +57,7 @@ public class SecurityCredentialsConfig extends WebSecurityConfigurerAdapter impl
                 .authorizeRequests()
                 // allow all POST requests
                 .antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
+                .antMatchers(HttpMethod.GET, jwtConfig.getTest1Uri()).permitAll()
                 // any other requests must be authenticated
                 .anyRequest().authenticated();
     }

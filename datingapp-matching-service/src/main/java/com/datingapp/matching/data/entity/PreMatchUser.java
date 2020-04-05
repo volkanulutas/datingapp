@@ -18,7 +18,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Match extends BaseEntity implements Serializable {
+public class PreMatchUser extends BaseEntity implements Serializable {
 
     private User user;
 

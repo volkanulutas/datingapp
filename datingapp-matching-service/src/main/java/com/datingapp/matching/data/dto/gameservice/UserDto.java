@@ -1,5 +1,4 @@
-package com.datingapp.matching.data.dto.authservice;
-
+package com.datingapp.matching.data.dto.gameservice;
 
 import com.datingapp.matching.data.common.EnumUserGender;
 import com.datingapp.matching.data.common.EnumUserStatus;
@@ -9,20 +8,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.io.Serializable;
-
-/**
- * Created on 30.03.2020
- *
- * @author volkanulutas
- */
 @Data
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class AvailableMatchingUserDto extends BaseDto implements Serializable {
-    private static final long serialVersionUID = -4777500450151947929L;
-    public String id;
+public class UserDto extends BaseDto {
+    private String id;
 
     private String username;
 

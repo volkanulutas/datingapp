@@ -1,8 +1,9 @@
 package com.datingapp.auth.data.entity;
 
 
-import lombok.*;
-
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;

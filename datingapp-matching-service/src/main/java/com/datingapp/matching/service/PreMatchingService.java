@@ -1,5 +1,6 @@
 package com.datingapp.matching.service;
 
+import com.datingapp.matching.data.dto.PreMatchUserDto;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,4 +10,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface PreMatchingService {
+    PreMatchUserDto findPreMatchingByUserId(String userId);
 }

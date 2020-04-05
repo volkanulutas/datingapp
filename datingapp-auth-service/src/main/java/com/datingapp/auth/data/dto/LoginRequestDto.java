@@ -8,6 +8,8 @@ import java.io.Serializable;
  * @author volkanulutas
  */
 public class LoginRequestDto implements Serializable {
+    private static final long serialVersionUID = -103057131321626375L;
+
     private String username;
 
     private String password;

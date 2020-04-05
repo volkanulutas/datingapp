@@ -1,13 +1,12 @@
 package com.datingapp.auth.controller;
 
 import com.datingapp.auth.converter.MatchingUserConverter;
-import com.datingapp.auth.converter.UserConverter;
-import com.datingapp.auth.data.dto.matchingservice.AvailableMatchingUserDto;
+import com.datingapp.auth.data.common.EnumUserGender;
 import com.datingapp.auth.data.dto.AppUserDto;
+import com.datingapp.auth.data.dto.matchingservice.AvailableMatchingUserDto;
 import com.datingapp.auth.data.entity.AppUser;
 import com.datingapp.auth.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -49,11 +48,16 @@ public class UserController {
                 new ResponseEntity<>(availableMatchingUserList, HttpStatus.OK);
     }
 
-
     @GetMapping(value = "test1")
     public ResponseEntity<?> send() {
         AvailableMatchingUserDto test1 = new AvailableMatchingUserDto();
         test1.setName("volkan");
+        test1.setBirthDate(1);
+        test1.setBirthPlace("Kayseri");
+        test1.setGender(EnumUserGender.MALE);
+        test1.setId("1");
+        test1.setSurname("Ulutas");
+        test1.setUsername("volkanulutas");
         userService.sendAvailableMatchingUser(test1);
         return new ResponseEntity<>(HttpStatus.OK);
     }
