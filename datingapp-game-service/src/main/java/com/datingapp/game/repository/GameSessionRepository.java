@@ -10,5 +10,5 @@ import org.springframework.stereotype.Repository;
  * @author onurcanyozgat
  */
 @Repository
-public interface GameSessionRepository extends MongoRepository<GameSessionEntity, Long> {
+public interface GameSessionRepository extends MongoRepository<GameSessionEntity, String> {
 }

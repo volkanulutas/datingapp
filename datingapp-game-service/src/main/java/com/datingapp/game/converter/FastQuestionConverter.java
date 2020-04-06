@@ -19,6 +19,7 @@ public class FastQuestionConverter extends BaseConverter<FastQuestionDto, FastQu
     @Override
     public FastQuestionDto toDto(FastQuestionEntity entity) {
         FastQuestionDto dto = new FastQuestionDto();
+        dto.setId(entity.getId());
         dto.setQuestionContent(entity.getQuestionContent());
         if (entity.getFirstAnswer() != null) {
             dto.setFirstAnswer(answerConverter.toDto(entity.getFirstAnswer()));
@@ -32,6 +33,7 @@ public class FastQuestionConverter extends BaseConverter<FastQuestionDto, FastQu
     @Override
     public FastQuestionEntity toEntity(FastQuestionDto dto) {
         FastQuestionEntity entity = new FastQuestionEntity();
+        entity.setId(dto.getId());
         entity.setQuestionContent(dto.getQuestionContent());
         if (dto.getFirstAnswer() != null) {
             entity.setFirstAnswer(answerConverter.toEntity(dto.getFirstAnswer()));

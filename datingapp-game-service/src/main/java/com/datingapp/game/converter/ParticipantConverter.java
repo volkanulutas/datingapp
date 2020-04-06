@@ -14,11 +14,23 @@ public class ParticipantConverter extends BaseConverter<ParticipantDto, Particip
 
     @Override
     public ParticipantDto toDto(ParticipantEntity entity) {
-        return null;
+        ParticipantDto dto = new ParticipantDto();
+        dto.setId(entity.getId());
+        dto.setNickname(entity.getNickname());
+//        for (ParticipantFeatureEntity participantFeatureEntity : entity.getFeatureList()) {
+//            
+//        }
+        return dto;
     }
 
     @Override
     public ParticipantEntity toEntity(ParticipantDto dto) {
-        return null;
+        ParticipantEntity entity = new ParticipantEntity();
+        entity.setId(dto.getId());
+        entity.setNickname(dto.getNickname());
+//        for (ParticipantFeatureDto participantFeatureDto : dto.getFeatureList()) {
+//
+//        }
+        return entity;
     }
 }

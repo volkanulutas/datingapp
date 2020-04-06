@@ -37,8 +37,8 @@ public class GameSessionServiceImpl implements GameSessionService {
         gameSessionDto.setSecondParticipant(gameSessionInitiateDto.getSecondParticipant());
         gameSessionDto.setQuestions(questionService.getRandomQuestions(5));
 
-        gameSessionRepository.save(gameSessionConverter.toEntity(gameSessionDto));
-        return gameSessionDto;
+        GameSessionEntity entity = gameSessionRepository.save(gameSessionConverter.toEntity(gameSessionDto));
+        return gameSessionConverter.toDto(entity);
     }
 
     @Override
@@ -61,8 +61,10 @@ public class GameSessionServiceImpl implements GameSessionService {
                 }
             }
             gameSessionRepository.save(entity);
+            return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
 }

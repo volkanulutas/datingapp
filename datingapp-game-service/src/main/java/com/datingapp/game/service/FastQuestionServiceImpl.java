@@ -5,6 +5,10 @@ import com.datingapp.game.data.dto.FastQuestionDto;
 import com.datingapp.game.data.entity.FastQuestionEntity;
 import com.datingapp.game.repository.FastQuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
+import org.springframework.data.mongodb.core.aggregation.SampleOperation;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,6 +29,9 @@ public class FastQuestionServiceImpl implements FastQuestionService {
 
     @Autowired
     private FastQuestionConverter converter;
+
+    @Autowired
+    private MongoTemplate mongoTemplate;
 
     @Override
     public FastQuestionDto save(FastQuestionDto dto) {
@@ -47,6 +54,10 @@ public class FastQuestionServiceImpl implements FastQuestionService {
 
     @Override
     public List<FastQuestionDto> getRandomQuestions(int number) {
-        return null;
+        SampleOperation matchStage = Aggregation.sample(5);
+        Aggregation aggregation = Aggregation.newAggregation(matchStage);
+        AggregationResults<FastQuestionEntity> output = mongoTemplate.aggregate(aggregation, "FastQuestion", FastQuestionEntity.class);
+        List<FastQuestionEntity> mappedResults = output.getMappedResults();
+        return mappedResults.stream().map(entity -> converter.toDto(entity)).collect(Collectors.toList());
     }
 }

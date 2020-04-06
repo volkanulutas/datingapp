@@ -11,14 +11,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("Answer")
 public class AnswerEntity extends BaseEntity {
 
-    private long participantId;
+    private String participantId;
     private String content;
 
-    public long getParticipantId() {
+    public String getParticipantId() {
         return participantId;
     }
 
-    public void setParticipantId(long participantId) {
+    public void setParticipantId(String participantId) {
         this.participantId = participantId;
     }
 

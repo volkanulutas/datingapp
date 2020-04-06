@@ -27,6 +27,7 @@ public class GameSessionConverter extends BaseConverter<GameSessionDto, GameSess
     @Override
     public GameSessionDto toDto(GameSessionEntity entity) {
         GameSessionDto dto = new GameSessionDto();
+        dto.setId(entity.getId());
         dto.setFirstParticipant(participantConverter.toDto(entity.getFirstParticipant()));
         dto.setSecondParticipant(participantConverter.toDto(entity.getSecondParticipant()));
         List<FastQuestionDto> questionDtoList = new ArrayList<>();
@@ -40,6 +41,7 @@ public class GameSessionConverter extends BaseConverter<GameSessionDto, GameSess
     @Override
     public GameSessionEntity toEntity(GameSessionDto dto) {
         GameSessionEntity entity = new GameSessionEntity();
+        entity.setId(dto.getId());
         entity.setFirstParticipant(participantConverter.toEntity(dto.getFirstParticipant()));
         entity.setSecondParticipant(participantConverter.toEntity(dto.getSecondParticipant()));
         List<FastQuestionEntity> questionEntities = new ArrayList<>();
