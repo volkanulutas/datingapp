@@ -2,6 +2,9 @@ package com.datingapp.game.data.entity;
 
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
 /**
  * Created on 27.03.2020
  *
@@ -11,13 +14,14 @@ import org.springframework.data.annotation.Id;
 public class BaseEntity {
 
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String id;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 }
