@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: datingapp-congig-service
+    management:
+      security:
+        enabled: false
+    cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/volkanulutas/datingapp-config-repo.git
+          bootstrap: true
+      server:
+        git:
+          username: volkanulutas@hacettepe.edu.tr
+          password: git9010*vEm
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  level:
+    org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
+    com.mintbeans.chat.service:
+      MessagePublisher: INFO
+      MessageSubscriber: INFO
+

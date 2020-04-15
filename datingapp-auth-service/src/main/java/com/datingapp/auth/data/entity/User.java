@@ -1,0 +1,51 @@
+package com.datingapp.auth.data.entity;
+
+
+import com.datingapp.auth.data.common.EnumUserGender;
+import com.datingapp.auth.data.common.EnumUserRole;
+import com.datingapp.auth.data.common.EnumUserStatus;
+import com.datingapp.auth.data.common.UserPreference;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.io.Serializable;
+
+/**
+ * Created on 28.03.2020
+ *
+ * @author volkanulutas
+ */
+@Data
+@ToString(exclude = "id")
+@AllArgsConstructor
+@NoArgsConstructor
+@Document(collection = "User")
+public class User extends BaseEntity implements Serializable {
+
+    private String username;
+
+    private String password;
+
+    private String name;
+
+    private String surname;
+
+    private long birthDate;
+
+    private String birthPlace;
+
+    private byte[] userPicture;
+
+    private EnumUserRole userRole;
+
+    private Integer loginAttempt;
+
+    private EnumUserStatus status;
+
+    private EnumUserGender gender;
+
+    private UserPreference userPreference;
+}

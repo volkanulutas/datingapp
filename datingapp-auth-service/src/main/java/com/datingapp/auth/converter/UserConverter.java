@@ -1,7 +1,7 @@
 package com.datingapp.auth.converter;
 
-import com.datingapp.auth.data.dto.AppUserDto;
-import com.datingapp.auth.data.entity.AppUser;
+import com.datingapp.auth.data.dto.UserDto;
+import com.datingapp.auth.data.entity.User;
 
 /**
  * Created on 28.03.2020
@@ -9,11 +9,15 @@ import com.datingapp.auth.data.entity.AppUser;
  * @author volkanulutas
  */
 @Converter
-public class UserConverter extends BaseConverter<AppUserDto, AppUser> {
+public class UserConverter extends BaseConverter<UserDto, User> {
 
     @Override
-    public AppUserDto toDto(AppUser entity) {
-        AppUserDto dto = new AppUserDto();
+    public UserDto toDto(User entity) {
+        if (entity == null) {
+            return null;
+        }
+        UserDto dto = new UserDto();
+        dto.setId(entity.getId());
         dto.setName(entity.getName());
         dto.setSurname(entity.getSurname());
         dto.setUsername(entity.getUsername());
@@ -24,12 +28,17 @@ public class UserConverter extends BaseConverter<AppUserDto, AppUser> {
         dto.setUserRole(entity.getUserRole());
         dto.setStatus(entity.getStatus());
         dto.setUserPicture(entity.getUserPicture());
+        dto.setUserPreference(entity.getUserPreference());
         return dto;
     }
 
     @Override
-    public AppUser toEntity(AppUserDto dto) {
-        AppUser entity = new AppUser();
+    public User toEntity(UserDto dto) {
+        if (dto == null) {
+            return null;
+        }
+        User entity = new User();
+        entity.setId(dto.getId());
         entity.setName(dto.getName());
         entity.setSurname(dto.getSurname());
         entity.setUsername(dto.getUsername());
@@ -40,6 +49,7 @@ public class UserConverter extends BaseConverter<AppUserDto, AppUser> {
         entity.setUserRole(dto.getUserRole());
         entity.setStatus(dto.getStatus());
         entity.setUserPicture(dto.getUserPicture());
+        entity.setUserPreference(dto.getUserPreference());
         return entity;
     }
 }

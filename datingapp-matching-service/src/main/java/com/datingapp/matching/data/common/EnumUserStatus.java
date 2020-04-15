@@ -1,10 +1,14 @@
 package com.datingapp.matching.data.common;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created on 28.03.2020
  *
  * @author volkanulutas
  */
+@Getter
 public enum EnumUserStatus {
     BLOCKED("Blocked User by Application"),
     BLOCKED_BY_LOGIN_ATTEMPT("Blocked User by login attempt"),

@@ -32,14 +32,10 @@
         <module>datingapp-chat-service</module>
         <module>datingapp-game-service</module>
         <module>datingapp-matching-service</module>
+        <module>datingapp-common</module>
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.28</version>
-        </dependency>
         <!-- Fix: For JDK 8+, Unable to start embedded Tomcat.
         Ref: http://www.programmersought.com/article/5725374835/ -->
         <dependency>

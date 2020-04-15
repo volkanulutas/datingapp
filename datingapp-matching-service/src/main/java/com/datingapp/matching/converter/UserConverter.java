@@ -1,14 +1,21 @@
 package com.datingapp.matching.converter;
 
-import com.datingapp.matching.controller.BaseConverter;
-import com.datingapp.matching.data.dto.gameservice.UserDto;
+import com.datingapp.matching.data.dto.UserDto;
 import com.datingapp.matching.data.entity.User;
 import org.springframework.stereotype.Component;
 
+/**
+ * Created on 12.04.2020
+ *
+ * @author volkanulutas
+ */
 @Component
 public class UserConverter extends BaseConverter<UserDto, User> {
     @Override
     public UserDto toDto(User entity) {
+        if (entity == null) {
+            return null;
+        }
         UserDto target = new UserDto();
         target.setBirthDate(entity.getBirthDate());
         target.setBirthPlace(entity.getBirthPlace());
@@ -23,6 +30,9 @@ public class UserConverter extends BaseConverter<UserDto, User> {
 
     @Override
     public User toEntity(UserDto dto) {
+        if (dto == null) {
+            return null;
+        }
         User target = new User();
         target.setBirthDate(dto.getBirthDate());
         target.setBirthPlace(dto.getBirthPlace());

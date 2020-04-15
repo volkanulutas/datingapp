@@ -1,12 +1,13 @@
 package com.datingapp.auth.controller;
 
-import com.datingapp.auth.converter.MatchingUserConverter;
+import com.datingapp.auth.converter.AvailableUserConverter;
 import com.datingapp.auth.data.common.EnumUserGender;
-import com.datingapp.auth.data.dto.AppUserDto;
-import com.datingapp.auth.data.dto.matchingservice.AvailableMatchingUserDto;
-import com.datingapp.auth.data.entity.AppUser;
+import com.datingapp.auth.data.dto.UserDto;
+import com.datingapp.auth.data.dto.AvailableUserDto;
+import com.datingapp.auth.data.entity.User;
 import com.datingapp.auth.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,37 +21,49 @@ import java.util.List;
  * @author volkanulutas
  */
 @RestController
-@RequestMapping("/")
 public class UserController {
 
     @Autowired
-    private MatchingUserConverter appUserMatchingConverter;
+    private AvailableUserConverter availableUserConverter;
 
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private Environment env;
+
+    // @RequestMapping("/")
+    @GetMapping(value = "/")
+    public String home() {
+        // This is useful for debugging
+        // When having multiple instance of demo1 service running at different ports.
+        // We load balance among them, and display which instance received the request.
+        return "GET Hello from Auth Service running at port: " + env.getProperty("local.server.port");
+    }
+
+    /*
     @PostMapping(path = "/signup", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<AppUserDto> signup(@RequestBody AppUserDto userDTO) {
-        AppUserDto user = userService.createUser(userDTO).orElse(null);
+    public ResponseEntity<UserDto> signup(@RequestBody UserDto userDTO) {
+        UserDto user = userService.saveUser(userDTO).orElse(null);
         return (user == null) ? new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR)
                 : new ResponseEntity<>(user, HttpStatus.OK);
     }
 
-    @GetMapping(value = "")
-    public ResponseEntity<?> getMatchingUser() {
-        List<AppUser> userList = userService.getAvailableMatchingUser();
-        List<AvailableMatchingUserDto> availableMatchingUserList = new ArrayList<>();
-        for (AppUser appUser : userList) {
-            AvailableMatchingUserDto appMatchingUserDto = appUserMatchingConverter.toDto(appUser);
-            availableMatchingUserList.add(appMatchingUserDto);
+    @GetMapping(value = "/availableuser")
+    public ResponseEntity<?> getAvailableUser() {
+        List<User> userList = userService.getAvailableUser();
+        List<AvailableUserDto> availableUserList = new ArrayList<>();
+        for (User appUser : userList) {
+            AvailableUserDto availableUserDto = availableUserConverter.toDto(appUser);
+            availableUserList.add(availableUserDto);
         }
-        return (availableMatchingUserList.isEmpty()) ? new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR) :
-                new ResponseEntity<>(availableMatchingUserList, HttpStatus.OK);
+        return (availableUserList.isEmpty()) ? new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR) :
+                new ResponseEntity<>(availableUserList, HttpStatus.OK);
     }
 
     @GetMapping(value = "test1")
     public ResponseEntity<?> send() {
-        AvailableMatchingUserDto test1 = new AvailableMatchingUserDto();
+        AvailableUserDto test1 = new AvailableUserDto();
         test1.setName("volkan");
         test1.setBirthDate(1);
         test1.setBirthPlace("Kayseri");
@@ -58,7 +71,8 @@ public class UserController {
         test1.setId("1");
         test1.setSurname("Ulutas");
         test1.setUsername("volkanulutas");
-        userService.sendAvailableMatchingUser(test1);
+        userService.sendAvailableUser(test1);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+     */
 }

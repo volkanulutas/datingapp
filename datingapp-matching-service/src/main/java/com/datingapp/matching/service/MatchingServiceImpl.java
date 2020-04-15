@@ -3,7 +3,7 @@ package com.datingapp.matching.service;
 import com.datingapp.matching.converter.MatchUserConverter;
 import com.datingapp.matching.converter.UserConverter;
 import com.datingapp.matching.data.dto.MatchUserDto;
-import com.datingapp.matching.data.dto.gameservice.UserDto;
+import com.datingapp.matching.data.dto.UserDto;
 import com.datingapp.matching.data.entity.MatchUser;
 import com.datingapp.matching.data.entity.User;
 import com.datingapp.matching.repository.MatchingUserRepository;
@@ -32,7 +32,7 @@ public class MatchingServiceImpl implements MatchingService {
     private MatchUserConverter matchUserConverter;
 
     @Override
-    public MatchUserDto findPreMatchingByUserId(String userId) {
+    public MatchUserDto findMachingByUserId(String userId) {
         AtomicReference<MatchUserDto> result = null;
         List<MatchUser> matchUserDtoList = matchingUserRepository.findByUser_Id(userId);
         Optional.of(matchUserDtoList).ifPresent(preMatchDtos -> {
@@ -47,7 +47,7 @@ public class MatchingServiceImpl implements MatchingService {
         MatchUser matchUser1 = null;
         MatchUser matchUser2 = null;
 
-        MatchUserDto matchUserDto1 = findPreMatchingByUserId(userDto1.getId());
+        MatchUserDto matchUserDto1 = findMachingByUserId(userDto1.getId());
         if (matchUserDto1 == null) {
             matchUser1 = new MatchUser();
             List<User> matchingList1 = new ArrayList<>();
@@ -63,7 +63,7 @@ public class MatchingServiceImpl implements MatchingService {
         }
 
         // matchUserDto2
-        MatchUserDto matchUserDto2 = findPreMatchingByUserId(userDto2.getId());
+        MatchUserDto matchUserDto2 = findMachingByUserId(userDto2.getId());
         if (matchUserDto2 == null) {
             matchUser2 = new MatchUser();
             List<User> matchingList2 = new ArrayList<>();

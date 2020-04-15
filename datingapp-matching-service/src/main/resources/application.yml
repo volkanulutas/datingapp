@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: datingapp-matching-service
+    data:
+      mongodb:
+        database: datingapp-matching-service-db
+        port: 27017
+        host: localhost
+
+server:
+  port: 9100
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+rabbitmq:
+  addresses: localhost:5672
+  adminAddresses: http://localhost:15672
+  nodes: rabbit@localhost
+  username: guest
+  password: guest
+  virtual_host: /
+  useSSL: false
+  sslProperties:
+  ssl:
+    keyStore:
+    keyStorePassphrase:
+    trustStore:
+    trustStorePassphrase:
+  channelCacheSize: 100
+
+logging:
+  level:
+    org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
+    com.mintbeans.chat.service:
+      MessagePublisher: INFO
+      MessageSubscriber: INFO
+
+amqp.availableuser.exchange: availableuser.exchange
+amqp.availableuser.routingkey: availableuser.routingkey
+amqp.availableuser.queuename: availableuser.queue

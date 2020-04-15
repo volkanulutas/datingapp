@@ -1,7 +1,6 @@
 package com.datingapp.matching.data.dto;
 
 
-import com.datingapp.matching.data.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +23,7 @@ public class PreMatchUserDto extends BaseDto implements Serializable {
 
     private String id;
 
-    private User user;
+    private UserDto user;
 
-    private List<User> matchingList;
+    private List<UserDto> matchingList;
 }

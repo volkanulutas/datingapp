@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: datingapp-apigateway-service
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    datingapp-auth-service:
+      path: /auth/**
+      serviceId: datingapp-auth-service
+      #url: http://127.0.0.1:9000/
+      sensitiveHeaders: Cookie,Set-Cookie
+      stripPrefix: false
+    datingapp-matching-service:
+      path: /matching/**
+      serviceId: datingapp-matching-service
+      #url: http://127.0.0.1:9100/
+    datingapp-demo1-service:
+      path: /demo1/**
+      serviceId: datingapp-demo1-service
+      #url: http://127.0.0.1:9200/
+
+datingapp.security.jwt.secret: V*l*k*O*n*R19--23

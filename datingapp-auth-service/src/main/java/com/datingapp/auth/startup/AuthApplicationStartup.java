@@ -1,7 +1,9 @@
 package com.datingapp.auth.startup;
 
+import com.datingapp.auth.data.common.EnumUserGender;
 import com.datingapp.auth.data.common.EnumUserRole;
-import com.datingapp.auth.data.dto.AppUserDto;
+import com.datingapp.auth.data.dto.UserDto;
+import com.datingapp.auth.data.common.UserPreference;
 import com.datingapp.auth.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,8 +26,17 @@ public class AuthApplicationStartup {
 
     @EventListener
     public void applicationInitialized(ApplicationReadyEvent event) {
-        userService.createUser(new AppUserDto("admin", "12345", EnumUserRole.ADMIN));
-        userService.createUser(new AppUserDto("volkan", "12345", EnumUserRole.USER));
-        userService.createUser(new AppUserDto("onurcan", "12345", EnumUserRole.USER));
+
+        UserDto user1 = new UserDto("volkan", "12345", EnumUserRole.USER);
+        user1.setUserPreference(new UserPreference(1, 1, 1, EnumUserGender.FEMALE));
+        userService.saveUser(user1);
+
+        UserDto user2 = new UserDto("onurcan", "12345", EnumUserRole.USER);
+        user2.setUserPreference(new UserPreference(1, 1, 1, EnumUserGender.FEMALE));
+        userService.saveUser(user2);
+
+        UserDto user3 = new UserDto("admin", "admin", EnumUserRole.ADMIN);
+
+        userService.saveUser(user3);
     }
 }
