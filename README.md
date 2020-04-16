@@ -75,21 +75,27 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | Adı          | Tür   | Servis URL                   | Return                                                | Body         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
 | HOME         | GET   | http://localhost:8888/       | Working Port                                          ||
-
-### datingapp-auth-service
+### datingapp-login-service
 
 | Adı          | Tür   | Servis URL                           | Return                                                | Body           |
 |:-------------| :-----|:-------------------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/auth           | Working Port                                          ||
-| HOME         | GET   | http://localhost:8080/auth           | Auth Token                                            | ```json {"username":"admin","password":"admin"} ```|
-| REGISTER     | POST   | http://localhost:8080/auth/register | UserDto*                                              | UserDto*       |
+| HOME         | GET   | http://localhost:8080/login           | Auth Token                                            | ```json {"username":"admin","password":"admin"} ```|
+
+### datingapp-user-service
+
+| Adı          | Tür   | Servis URL                           | Return                                                | Body           |
+|:-------------| :-----|:-------------------------------------| :-----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/user           | Working Port                                          ||
+| REGISTER     | POST   | http://localhost:8080/user/register | UserDto*                                              | UserDto*       |
 
 ### datingapp-matching-service
 
-| Adı          | Tür   | Servis URL                            | Return                                               | Body           |
-|:-------------| :-----|:--------------------------------------| :----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/matching        | Working Port                                         ||
-| HOME         | POST  | http://localhost:8080/matching/match  | Void                                                 |UserDto*, UserDto*|
+| Adı          | Tür   | Servis URL                                | Return                                               | Body           |
+|:-------------| :-----|:------------------------------------------| :----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/matching            | Working Port                                         ||
+| MATCH USERS  | POST  | http://localhost:8080/matching/match      | MatchUserDto*                                        |username(String), username(String)|
+| HOME         | GET   | http://localhost:8080/matching/pre/matchList  | AvailableUserDto*                                | username(String)|
+
 
 ### datingapp-demo1-service
 
