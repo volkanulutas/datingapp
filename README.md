@@ -71,16 +71,17 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 
 ### datingapp-config-service
 
-| Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
+| Adı          | Tür   | Servis URL                   | Return                                                | Body         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8888/       |                                                       | Working Port   |
+| HOME         | GET   | http://localhost:8888/       |  Working Port                                         ||
 
 ### datingapp-auth-service
 
-| Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
+| Adı          | Tür   | Servis URL                   | Return                                                | Body         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/auth   |                                                       | Working Port   |
-| LOGIN        | POST  | http://localhost:8080/auth   |  ```json {"username":"admin","password":"admin"} ```  | Auth Token     |
+| HOME         | GET   | http://localhost:8080/auth   |  Working Port                                         ||
+| HOME         | GET   | http://localhost:8080/auth   |  Auth Token                                           | ```json {"username":"admin","password":"admin"} ```|
+
 
 ### datingapp-matching-service
 
