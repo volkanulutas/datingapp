@@ -26,36 +26,36 @@ Lombok Plugin'ini IDEA'ya ekleyiniz.
 
 | Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| LOGIN        | POST  | http://localhost:8080/auth   |  ```json {"username":"admin","password":"admin"} ```  |                |
-
+| HOME         | GET   | http://localhost:8080/       |                                                       | Working Port   |
 
 ### datingapp-auth-service
 
 | Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| LOGIN        | POST  | http://localhost:8080/auth   |  ```json {"username":"admin","password":"admin"} ```  |                |
+| HOME         | GET   | http://localhost:8080/auth   |                                                       | Working Port   |
+| LOGIN        | POST  | http://localhost:8080/auth   |  ```json {"username":"admin","password":"admin"} ```  | Auth Token     |
 
 ### datingapp-matching-service
 
-| Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
-|:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| LOGIN        | POST  | http://localhost:8080/auth   |  ```json {"username":"admin","password":"admin"} ```  |                |
+| Adı          | Tür   | Servis URL                       | Body                                                  | Return         |
+|:-------------| :-----|:-----------------------------    | :-----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/matching   |                                                       | Working Port   |
 
 ### datingapp-demo1-service
 
 | Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| LOGIN        | POST  | http://localhost:8080/auth   |  ```json {"username":"admin","password":"admin"} ```  |                |
+| HOME         | GET   | http://localhost:8080/demo1  |                                                       | Working Port   |
 
 ### datingapp-game-service
 
 | Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| LOGIN        | POST  | http://localhost:8080/auth   |  ```json {"username":"admin","password":"admin"} ```  |                |
+| HOME         | GET   | http://localhost:8080/game   |                                                       | Working Port   |
 
 ### datingapp-chat-service
 
 | Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| LOGIN        | POST  | http://localhost:8080/auth   |  ```json {"username":"admin","password":"admin"} ```  |                |
+| HOME         | GET   | http://localhost:8080/chat   |                                                       | Working Port   |
                 
