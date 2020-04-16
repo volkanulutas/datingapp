@@ -73,39 +73,39 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 
 | Adı          | Tür   | Servis URL                   | Return                                                | Body         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8888/       |  Working Port                                         ||
+| HOME         | GET   | http://localhost:8888/       | Working Port                                          ||
 
 ### datingapp-auth-service
 
-| Adı          | Tür   | Servis URL                   | Return                                                | Body         |
-|:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/auth   |  Working Port                                         ||
-| HOME         | GET   | http://localhost:8080/auth   |  Auth Token                                           | ```json {"username":"admin","password":"admin"} ```|
+| Adı          | Tür   | Servis URL                      | Return                                                | Body         |
+|:-------------| :-----|:--------------------------------| :-----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/auth      | Working Port                                          ||
+| HOME         | GET   | http://localhost:8080/auth      | Auth Token                                            | ```json {"username":"admin","password":"admin"} ```|
 
 
 ### datingapp-matching-service
 
-| Adı          | Tür   | Servis URL                       | Body                                                  | Return         |
-|:-------------| :-----|:-----------------------------    | :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/matching   |                                                       | Working Port   |
+| Adı          | Tür   | Servis URL                      | Return                                                | Body         |
+|:-------------| :-----|:--------------------------------| :-----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/matching  | Working Port                                          ||
 
 ### datingapp-demo1-service
 
-| Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
-|:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/demo1  |                                                       | Working Port   |
+| Adı          | Tür   | Servis URL                      | Return                                                | Body         |
+|:-------------| :-----|:--------------------------------| :-----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/demo1     | Working Port                                          ||
 
 ### datingapp-game-service
 
-| Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
-|:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/game   |                                                       | Working Port   |
-
-
+| Adı          | Tür   | Servis URL                      | Return                                                | Body         |
+|:-------------| :-----|:--------------------------------| :-----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/game      | Working Port                                          ||
 
 ### datingapp-chat-service
 
-| Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
-|:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/chat   |                                                       | Working Port   |
-| HOME         | GET   | http://localhost:8080/chat   |  gsgsgsgjkgjsgkkdsjkgsjkdjkkjskjgkdgskkskjgsjkgjksgkgkdgjkdsjkgjkjkdgjksjksjkdskjgjksdjkgskjkjsgjks                                                     | Working Port   |                
+| Adı          | Tür   | Servis URL                                            | Return                                                | Body         |
+|:-------------| :-----|:------------------------------------------------------| :-----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/chat                            | Working Port                                          ||
+| QUESTION ADD | POST  | http://localhost:8080/chat/fastQuestion/saveAll       | |```json {"username":"admin","password":"admin"} ```|
+
+        
