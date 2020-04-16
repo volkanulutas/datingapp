@@ -1,19 +1,11 @@
 package com.datingapp.auth.controller;
 
 import com.datingapp.auth.converter.AvailableUserConverter;
-import com.datingapp.auth.data.common.EnumUserGender;
-import com.datingapp.auth.data.dto.UserDto;
-import com.datingapp.auth.data.dto.AvailableUserDto;
-import com.datingapp.auth.data.entity.User;
 import com.datingapp.auth.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created on 28.03.2020
@@ -32,13 +24,9 @@ public class UserController {
     @Autowired
     private Environment env;
 
-    // @RequestMapping("/")
     @GetMapping(value = "/")
     public String home() {
-        // This is useful for debugging
-        // When having multiple instance of demo1 service running at different ports.
-        // We load balance among them, and display which instance received the request.
-        return "GET Hello from Auth Service running at port: " + env.getProperty("local.server.port");
+        return "datingapp-auth-service running at port: " + env.getProperty("local.server.port");
     }
 
     /*

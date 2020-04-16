@@ -25,7 +25,7 @@ public class MatchController {
 
     @GetMapping(value = "/")
     public String home() {
-        return "GET Hello from Matching Service running at port: " + env.getProperty("local.server.port");
+        return "datingapp-matching-service running at port: " + env.getProperty("local.server.port");
     }
 
     @PostMapping(path = "/match", consumes = "application/json", produces = "application/json")

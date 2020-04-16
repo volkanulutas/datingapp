@@ -12,37 +12,34 @@ import org.springframework.web.client.RestTemplate;
 
 @RestController
 public class Demo1Controller {
-	private static final Logger LOGGER = LoggerFactory.getLogger(Demo1Controller.class);
-	
-	@Autowired
-	private RestTemplate restTemplate;
-	
-	@Autowired
-	private Environment env;
-	
-	// @RequestMapping("/")
-	@GetMapping(value = "/")
-	public String home() {
-		// This is useful for debugging
-		// When having multiple instance of demo1 service running at different ports.
-		// We load balance among them, and display which instance received the request.
-		return "GET Hello from Demo1 Service running at port: " + env.getProperty("local.server.port");
-	}
+    private static final Logger LOGGER = LoggerFactory.getLogger(Demo1Controller.class);
 
-	// @RequestMapping("/")
-	@PostMapping(path = "/post", produces = "application/json")
-	public String home2() {
-		// This is useful for debugging
-		// When having multiple instance of demo1 service running at different ports.
-		// We load balance among them, and display which instance received the request.
-		return "POST Hello from Demo1 Service running at port: " + env.getProperty("local.server.port");
-	}
-	
-	// -------- Admin Area --------
-	// This method should only be accessed by users with role of 'admin'
-	// We'll add the logic of role based auth later
-	@RequestMapping("/admin")
-	public String homeAdmin() {
-		return "This is the admin area of Demo1 service running at port: " + env.getProperty("local.server.port");
-	}
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @Autowired
+    private Environment env;
+
+
+    @GetMapping(value = "/")
+    public String home() {
+        return "datingapp-demo1-service running at port: " + env.getProperty("local.server.port");
+    }
+
+    // @RequestMapping("/")
+    @PostMapping(path = "/post", produces = "application/json")
+    public String home2() {
+        // This is useful for debugging
+        // When having multiple instance of demo1 service running at different ports.
+        // We load balance among them, and display which instance received the request.
+        return "POST Hello from Demo1 Service running at port: " + env.getProperty("local.server.port");
+    }
+
+    // -------- Admin Area --------
+    // This method should only be accessed by users with role of 'admin'
+    // We'll add the logic of role based auth later
+    @RequestMapping("/admin")
+    public String homeAdmin() {
+        return "This is the admin area of Demo1 service running at port: " + env.getProperty("local.server.port");
+    }
 }
