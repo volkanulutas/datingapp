@@ -10,6 +10,7 @@ Datingapp
 **MacOs**
 
 **Kurulum:**
+
 `$ brew update`
 
 `$ brew install rabbitmq`
@@ -38,7 +39,11 @@ Not: Daha sonra "Açma" adının her seferinde yapılmasından kurtulmak için s
 
 ## Lombok 
 
-Lombok Plugin'ini IDEA'ya ekleyiniz. 
+Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımları kodu daha temiz hale getirmektedir.
+
+[Referans - Lombok Kurulumu ve Kullanımı](https://medium.com/kodgemisi/project-lombok-6d2490df8adf)
+
+[Referans - Lombok Kurulumu ve Kullanımı 2](http://ilkaygunel.com/blog/2016/lokbok-nedir-ornek-kod/)
 
 # Servisler
 
