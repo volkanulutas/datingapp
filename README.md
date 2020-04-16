@@ -113,7 +113,7 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | ANSWER QUESTION | POST   | http://localhost:8080/game/fastGame/saveAnswer || ```json {"gameSessionId": "5e8b48b3d9e2a2097c111621", "questionId": "5e8b0678d9e2a221c0927174", "participantId": "test_user_id_1", "content": "Soru cevaplandı." }``` |
 
 
-**UserDto* Örneği** /user/register sorgusu
+**UserDto (*) Örneği** /user/register sorgusu
 ```json
 {
     "username":"ahmet",
