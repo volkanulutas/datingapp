@@ -9,7 +9,7 @@ Datingapp
 
 **MacOs**
 
-## MongoDB
+## MongoDB
 
 **MacOS**
 
