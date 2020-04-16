@@ -1,6 +1,6 @@
 # datingapp
 Datingapp
-
+16.04.2020 [WikiPage](https://github.com/volkanulutas/datingapp/wiki) devreye alındı. 
 # Gereksinimler
 ## Lombok 
 Lombok Plugin'ini IDEA'ya ekleyiniz. 
