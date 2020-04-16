@@ -53,6 +53,7 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | :------------                        |:----------------| :------------------------------|
 | datingapp-service-discovery-service  | 8761            | http://localhost:8761          |
 | datingapp-apigateway-service         | 8080            | http://localhost:8080          |
+| datingapp-congig-service             | 8888            | http://localhost:8888          |
 | datingapp-auth-service               | 9000            | http://localhost:8080/auth     |
 | datingapp-matching-service           | 9100            | http://localhost:8080/matching |
 | datingapp-demo1-service              | 9200            | http://localhost:8080/demo1    |
@@ -67,6 +68,12 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
 | HOME         | GET   | http://localhost:8080/       |                                                       | Working Port   |
+
+### datingapp-config-service
+
+| Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
+|:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8888/       |                                                       | Working Port   |
 
 ### datingapp-auth-service
 
