@@ -55,7 +55,7 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | datingapp-apigateway-service         | 8080            | http://localhost:8080          |
 | datingapp-congig-service             | 8888            | http://localhost:8888          |
 | datingapp-login-service              | 9000            | http://localhost:8080/login    |
-| datingapp-user-service               | 9100            | http://localhost:8080/auth     |
+| datingapp-user-service               | 9100            | http://localhost:8080/user     |
 | datingapp-matching-service           | 9200            | http://localhost:8080/matching |
 | datingapp-demo1-service              | 9300            | http://localhost:8080/demo1    |
 | datingapp-game-service               | 8083 (9400)     | http://localhost:8080/game     |
