@@ -84,9 +84,10 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 ### datingapp-user-service
 
 | Adı          | Tür   | Servis URL                           | Return                                                | Body           |
-|:-------------| :-----|:-------------------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/user           | Working Port                                          ||
+|:-------------| :------|:-------------------------------------| :----------------------------------------------------|:---------------|
+| HOME         | GET    | http://localhost:8080/user           | Working Port                                         ||
 | REGISTER     | POST   | http://localhost:8080/user/register | UserDto*                                              | UserDto*       |
+| FIND USER    | GET    | http://localhost:8080/user/findUserByUsername | UserDto*                                    | username(String) |
 
 ### datingapp-matching-service
 
