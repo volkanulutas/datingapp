@@ -98,7 +98,7 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 
 | Adı          | Tür   | Servis URL                               | Return                                                | Body         |
 |:-------------| :-----|:-----------------------------------------| :-----------------------------------------------------|:--------------------------------------------------------------------------------|
-| HOME         | GET   | http://localhost:8080/game               | Working Port                                          | |             | HOME         | GET   | http://localhost:8080/game               | Working Port                                          | | ```json [ { "questionContent": "Soru-1" }, { "questionContent": "Soru-2" }, { "questionContent": "Soru-3" }, { "questionContent": "Soru-4" }, { "questionContent": "Soru-5" } ] ```                               |  |          
+| HOME         | GET   | http://localhost:8080/game               | Working Port                                          | |             | HOME         | GET   | http://localhost:8080/game               | Working Port                                          | ```json [ { "questionContent": "Soru-1" }, { "questionContent": "Soru-2" }, { "questionContent": "Soru-3" }, { "questionContent": "Soru-4" }, { "questionContent": "Soru-5" } ] ```                               |  |          
 
 
 
