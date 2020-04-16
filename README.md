@@ -107,4 +107,4 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
 | HOME         | GET   | http://localhost:8080/chat   |                                                       | Working Port   |
-                
+| HOME         | GET   | http://localhost:8080/chat   |  gsgsgsgjkgjsgkkdsjkgsjkdjkkjskjgkdgskkskjgsjkgjksgkgkdgjkdsjkgjkjkdgjksjksjkdskjgjksdjkgskjkjsgjks                                                     | Working Port   |                
