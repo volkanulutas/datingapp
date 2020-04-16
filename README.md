@@ -2,6 +2,25 @@
 Datingapp
 16.04.2020 [WikiPage](https://github.com/volkanulutas/datingapp/wiki) devreye alındı. 
 # Gereksinimler
+
+## RabbitMQ
+**MacOs**
+
+## MongoDB
+**MacOS**
+[Referans - MacOS MongoDB Community Kurulumu](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/)
+**Windows** 
+[Referans - Windows MongoDB Community Kurulumu](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
+
+Kurulum:
+`$ brew update`
+`$ brew install rabbitmq`
+`$ export PATH=$PATH:/usr/local/opt/rabbitmq/sbin`
+`$ rabbitmq-server`
+Açma:
+`$ export PATH=$PATH:/usr/local/opt/rabbitmq/sbin`
+`$ rabbitmq-server`
+Not: Daha sonra "Açma" adının her seferinde yapılmasından kurtulmak için servis haline getirilecektir.
 ## Lombok 
 Lombok Plugin'ini IDEA'ya ekleyiniz. 
 
