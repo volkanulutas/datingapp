@@ -78,18 +78,18 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 
 ### datingapp-auth-service
 
-| Adı          | Tür   | Servis URL                           | Return                                                | Body         |
+| Adı          | Tür   | Servis URL                           | Return                                                | Body           |
 |:-------------| :-----|:-------------------------------------| :-----------------------------------------------------|:---------------|
 | HOME         | GET   | http://localhost:8080/auth           | Working Port                                          ||
 | HOME         | GET   | http://localhost:8080/auth           | Auth Token                                            | ```json {"username":"admin","password":"admin"} ```|
-| REGISTER     | POST   | http://localhost:8080/auth/register | UserDto                                               | UserDto      |
+| REGISTER     | POST   | http://localhost:8080/auth/register | UserDto*                                              | UserDto*       |
 
 ### datingapp-matching-service
 
-| Adı          | Tür   | Servis URL                            | Return                                                | Body           |
-|:-------------| :-----|:--------------------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/matching        | Working Port                                          ||
-| HOME         | POST  | http://localhost:8080/matching/match  | Void                                                  |UserDto, UserDto|
+| Adı          | Tür   | Servis URL                            | Return                                               | Body           |
+|:-------------| :-----|:--------------------------------------| :----------------------------------------------------|:---------------|
+| HOME         | GET   | http://localhost:8080/matching        | Working Port                                         ||
+| HOME         | POST  | http://localhost:8080/matching/match  | Void                                                 |UserDto*, UserDto*|
 
 ### datingapp-demo1-service
 
@@ -111,4 +111,41 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | QUESTION ADD | POST  | http://localhost:8080/game/fastQuestion/saveAll       | |```json {"username":"admin","password":"admin"} ```|
 | BEGIN GAMESESSION | POST   | http://localhost:8080/game/fastGame/initiateGameSession || ```json { "gameType": "FAST_DATE", "firstParticipant": { "id":"test_user_id_1", "nickname": "ManOfHonor", "featureList": null }, "secondParticipant": { "id":"test_user_id_2", "nickname": "OtherNickname", "featureList": null } }``` |
 | ANSWER QUESTION | POST   | http://localhost:8080/game/fastGame/saveAnswer || ```json {"gameSessionId": "5e8b48b3d9e2a2097c111621", "questionId": "5e8b0678d9e2a221c0927174", "participantId": "test_user_id_1", "content": "Soru cevaplandı." }``` |
-        
+
+
+**UserDto Örneği**
+/user/register sorgusu
+```json
+{
+	"username":"ahmet",
+
+    "password":"12345",
+
+    "name":"Ahmet",
+
+    "surname":"Testçioğlu",
+
+    "birthDate":"1",
+
+	"birthPlace":"Adıyaman",
+    
+    "userRole": "USER",
+
+    "loginAttempt":"0",
+
+    "status": "ONLINE",
+
+    "gender": "MALE",
+        "userPreference": {
+    	
+    "placeRange": 5,
+
+    "minimumAge": 20,
+
+    "maximumAge": 30,
+
+    "gender": "FEMALE"
+    	
+    }
+}
+```       
