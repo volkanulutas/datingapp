@@ -65,9 +65,9 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 ### datingapp-apigateway-service
 
 
-| Adı          | Tür   | Servis URL                   | Body                                                  | Return         |
+| Adı          | Tür   | Servis URL                   | Return                                                | Body         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/       |                                                       | Working Port   |
+| HOME         | GET   | http://localhost:8080/       |  Working Port                                         ||
 
 ### datingapp-config-service
 
