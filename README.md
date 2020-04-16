@@ -6,7 +6,7 @@ Datingapp
 Lombok Plugin'ini IDEA'ya ekleyiniz. 
 
 | Servis                               | Port            | URL (Api Gateway)              |
-| :------------                        |:---------------:| ------------------------------:|
+| :------------                        |:----------------| :------------------------------|
 | datingapp-service-discovery-service  | 8761            | http://localhost:8761          |
 | datingapp-api-gateway-service        | 8080            | http://localhost:8080          |
 | datingapp-auth-service               | 9000            | http://localhost:8080/auth     |
