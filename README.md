@@ -1,7 +1,30 @@
 # datingapp
 Datingapp
 
+**Co-Founders** 
+
+[Volkan Ulutaş](https://github.com/volkanulutas), [Onurcan Yozgat](https://github.com/onurcanyozgat)
+
+**Server Side Developer**
+
+[Volkan Ulutaş](https://github.com/volkanulutas), [Onurcan Yozgat](https://github.com/onurcanyozgat)
+
+**Client Side Developer**
+
+*Android[Nizammeddin Tuğral](https://github.com/)*
+
+*IOS* **[NONE]**
+
+**Grafik İşleri**
+
+***[NONE]** *
+
+**Music**
+
+*Android[Nizammeddin Tuğral](https://github.com/)*
+
 16.04.2020 [WikiPage](https://github.com/volkanulutas/datingapp/wiki) devreye alındı. 
+Not *italic* olarak belirtilen kısımlar taslak halindedir, geliştirme aşamasındadır.
 
 # Gereksinimler
 
