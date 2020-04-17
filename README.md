@@ -25,7 +25,10 @@ Datingapp
 
 *[Nizammeddin Tuğral](https://github.com/)*
 
+## Notlar
+
 16.04.2020 [WikiPage](https://github.com/volkanulutas/datingapp/wiki) devreye alındı. 
+
 Not *italic* olarak belirtilen kısımlar taslak halindedir, geliştirme aşamasındadır.
 
 # Gereksinimler
