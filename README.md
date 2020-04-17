@@ -95,7 +95,7 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 |:-------------| :-----|:------------------------------------------| :----------------------------------------------------|:---------------|
 | HOME         | GET   | http://localhost:8080/matching            | Working Port                                         ||
 | MATCH USERS  | POST  | http://localhost:8080/matching/match      | Boolean                                             |username(String), username(String)|
-| MATCH LIST   | GET   | http://localhost:8080/matching/matchList  | MatchUserDto*                                         ||
+| MATCH LIST   | GET   | http://localhost:8080/matching/matchList  | MatchUserDto*                                         |username(String) |
 | PREMATCH LIST| GET   | http://localhost:8080/matching/pre/matchList  | AvailableUserDto*                                | username(String)|
 
 
