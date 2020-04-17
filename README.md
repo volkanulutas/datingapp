@@ -1,6 +1,8 @@
 # datingapp
 Datingapp
 
+## Roller
+
 **Co-Founders** 
 
 [Volkan Ulutaş](https://github.com/volkanulutas), [Onurcan Yozgat](https://github.com/onurcanyozgat)
@@ -11,9 +13,9 @@ Datingapp
 
 **Client Side Developer**
 
-*Android[Nizammeddin Tuğral](https://github.com/)*
+*Android: [Nizammeddin Tuğral](https://github.com/)*
 
-*IOS* **[NONE]**
+*IOS:* **[NONE]**
 
 **Grafik İşleri**
 
