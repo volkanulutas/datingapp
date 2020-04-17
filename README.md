@@ -1,8 +1,6 @@
 # datingapp
 Datingapp
-<div class="text-red mb-2">
-  .text-red on white
-</div>
+
 16.04.2020 [WikiPage](https://github.com/volkanulutas/datingapp/wiki) devreye alındı. 
 
 # Gereksinimler
@@ -62,6 +60,8 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | datingapp-demo1-service              | 9300            | http://localhost:8080/demo1    |
 | datingapp-game-service               | 8083 (9400)     | http://localhost:8080/game     |
 | datingapp-chat-service               | 9500            | http://localhost:8080/chat     |
+| *datingapp-gem-service*              | 9600            | http://localhost:8080/gem      |
+ 
 
 ## Servisler Tanımlamaları ve Sorgular
 
@@ -77,6 +77,7 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | Adı          | Tür   | Servis URL                   | Return                                                | Body         |
 |:-------------| :-----|:-----------------------------| :-----------------------------------------------------|:---------------|
 | HOME         | GET   | http://localhost:8888/       | Working Port                                          ||
+
 ### datingapp-login-service
 
 | Adı          | Tür   | Servis URL                           | Return                                                | Body           |
@@ -85,12 +86,13 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 
 ### datingapp-user-service
 
-| Adı          | Tür   | Servis URL                           | Return                                                | Body           |
-|:-------------| :------|:-------------------------------------| :----------------------------------------------------|:---------------|
+| Adı          | Tür   | Servis URL                           | Return                                                | Body             |
+|:-------------| :------|:-------------------------------------| :----------------------------------------------------|:-----------------|
 | HOME         | GET    | http://localhost:8080/user           | Working Port                                         ||
-| REGISTER     | POST   | http://localhost:8080/user/register  | UserDto*                                             | UserDto*       |
+| REGISTER     | POST   | http://localhost:8080/user/register  | UserDto*                                             | UserDto*         |
 | FIND USER    | GET    | http://localhost:8080/user/findUserByUsername | UserDto*                                    | username(String) |
 | DELETE USER  | DELETE | http://localhost:8080/user/delete    | boolean                                              | username(String) |
+| *FORGET PASSWORD* | POST | http://localhost:8080/user/forgetPassword| url(String- mail send)                        |username(String)  |
 
 ### datingapp-matching-service
 
@@ -101,7 +103,6 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | MATCH LIST   | GET   | http://localhost:8080/matching/matchList  | MatchUserDto*                                         |username(String) |
 | DELETE MATCH | GET   | http://localhost:8080/matching/deleteMatch | boolean                                             |username(String), matchUsername(String) |
 | PREMATCH LIST| GET   | http://localhost:8080/matching/pre/matchList  | AvailableUserDto*                                | username(String)|
-
 
 ### datingapp-demo1-service
 
@@ -124,6 +125,8 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | BEGIN GAMESESSION | POST   | http://localhost:8080/game/fastGame/initiateGameSession || ```json { "gameType": "FAST_DATE", "firstParticipant": { "id":"test_user_id_1", "nickname": "ManOfHonor", "featureList": null }, "secondParticipant": { "id":"test_user_id_2", "nickname": "OtherNickname", "featureList": null } }``` |
 | ANSWER QUESTION | POST   | http://localhost:8080/game/fastGame/saveAnswer || ```json {"gameSessionId": "5e8b48b3d9e2a2097c111621", "questionId": "5e8b0678d9e2a221c0927174", "participantId": "test_user_id_1", "content": "Soru cevaplandı." }``` |
 
+### datingapp-gem-service 
+Oyundaki para/coin yönetiminin yapıldığı servis. 
 
 **UserDto (*) Örneği** 
 ```json
