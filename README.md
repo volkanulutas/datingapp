@@ -86,8 +86,9 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | Adı          | Tür   | Servis URL                           | Return                                                | Body           |
 |:-------------| :------|:-------------------------------------| :----------------------------------------------------|:---------------|
 | HOME         | GET    | http://localhost:8080/user           | Working Port                                         ||
-| REGISTER     | POST   | http://localhost:8080/user/register | UserDto*                                              | UserDto*       |
+| REGISTER     | POST   | http://localhost:8080/user/register  | UserDto*                                             | UserDto*       |
 | FIND USER    | GET    | http://localhost:8080/user/findUserByUsername | UserDto*                                    | username(String) |
+| DELETE USER  | DELETE | http://localhost:8080/user/delete    | boolean                                              | username(String) |
 
 ### datingapp-matching-service
 
@@ -96,6 +97,7 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | HOME         | GET   | http://localhost:8080/matching            | Working Port                                         ||
 | MATCH USERS  | POST  | http://localhost:8080/matching/match      | Boolean                                             |username(String), username(String)|
 | MATCH LIST   | GET   | http://localhost:8080/matching/matchList  | MatchUserDto*                                         |username(String) |
+| DELETE MATCH | GET   | http://localhost:8080/matching/deleteMatch | MatchUserDto*                                         |username(String) |
 | PREMATCH LIST| GET   | http://localhost:8080/matching/pre/matchList  | AvailableUserDto*                                | username(String)|
 
 
@@ -180,6 +182,35 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
             "birthPlace": null,
             "status": null,
             "gender": null
+        }
+    ]
+}
+```  
+
+**AvailableUserDto (*) 
+```json
+{
+    "id": null,
+    "user": {
+        "id": null,
+        "username": "volkan",
+        "name": null,
+        "surname": null,
+        "birthDate": 0,
+        "birthPlace": null,
+        "status": null,
+        "gender": null
+    },
+    "matchingList": [
+        {
+            "id": null,
+            "username": "elif",
+            "name": "elif",
+            "surname": "Testçioğlu",
+            "birthDate": 1,
+            "birthPlace": "Adıyaman",
+            "status": "ONLINE",
+            "gender": "FEMALE"
         }
     ]
 }
