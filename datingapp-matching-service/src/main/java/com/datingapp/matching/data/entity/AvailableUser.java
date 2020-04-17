@@ -2,8 +2,8 @@ package com.datingapp.matching.data.entity;
 
 
 import com.datingapp.matching.data.common.EnumUserGender;
-import com.datingapp.matching.data.common.EnumUserRole;
 import com.datingapp.matching.data.common.EnumUserStatus;
+import com.datingapp.matching.data.dto.UserPreferenceDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,8 +26,6 @@ public class AvailableUser extends BaseEntity implements Serializable {
 
     private String username;
 
-    private String password;
-
     private String name;
 
     private String surname;
@@ -36,21 +34,9 @@ public class AvailableUser extends BaseEntity implements Serializable {
 
     private String birthPlace;
 
-    private byte[] userPicture;
-
-    private EnumUserRole userRole;
-
-    private Integer loginAttempt;
-
     private EnumUserStatus status;
 
     private EnumUserGender gender;
 
     private UserPreference userPreference;
-
-    public AvailableUser(String username, String password, EnumUserRole userRole) {
-        this.username = username;
-        this.password = password;
-        this.userRole = userRole;
-    }
 }

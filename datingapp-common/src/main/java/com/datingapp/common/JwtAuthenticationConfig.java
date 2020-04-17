@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 @ToString
 public class JwtAuthenticationConfig {
 
-    @Value("${datingapp.security.jwt.url:/auth}")
+    @Value("${datingapp.security.jwt.url:/login}")
     private String url;
 
     @Value("${datingapp.security.jwt.header:Authorization}")

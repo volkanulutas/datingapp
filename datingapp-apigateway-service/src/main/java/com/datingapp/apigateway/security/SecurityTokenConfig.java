@@ -31,6 +31,9 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
+                .csrf().disable();
+        /*
+        httpSecurity
                 .csrf().disable()
                 .logout().disable()
                 .formLogin().disable()
@@ -46,6 +49,7 @@ public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(config.getUrl()).permitAll()
                 .anyRequest().authenticated();
+        */
         //.antMatchers("/demo1" + "/admin/**").hasRole("ADMIN")
         // .antMatchers("/matching/**").permitAll()
         //.antMatchers("/demo1/**").permitAll();

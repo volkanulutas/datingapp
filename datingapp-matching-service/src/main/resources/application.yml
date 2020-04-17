@@ -1,14 +1,14 @@
 spring:
   application:
     name: datingapp-matching-service
-    data:
-      mongodb:
-        database: datingapp-matching-service-db
-        port: 27017
-        host: localhost
+  data:
+    mongodb:
+      database: datingapp-matching-service-db
+      port: 27017
+      host: localhost
 
 server:
-  port: 9100
+  port: 9200
 
 eureka:
   client:
@@ -33,6 +33,9 @@ rabbitmq:
 
 logging:
   level:
+    root: INFO
+    org.springframework.web: INFO
+    org.hibernate: ERROR
     org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
     com.mintbeans.chat.service:
       MessagePublisher: INFO

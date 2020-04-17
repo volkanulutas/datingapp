@@ -10,5 +10,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface PreMatchingService {
-    PreMatchUserDto findPreMatchingByUserId(String userId);
+    PreMatchUserDto findPreMatchingByUsername(String username);
 }

@@ -24,8 +24,9 @@ public class PreMatchingServiceImpl implements PreMatchingService {
     private PreMatchingCriteriaService preMatchingCriteriaService;
 
     @Override
-    public PreMatchUserDto findPreMatchingByUserId(String userId) {
-        PreMatchUserDto preMatchingUserByCriteria = preMatchingCriteriaService.getPreMatchingUserByCriteria(userId);
+    public PreMatchUserDto findPreMatchingByUsername(String username) {
+        // TODO: önceden önerilmiş prematch önermeme.
+        PreMatchUserDto preMatchingUserByCriteria = preMatchingCriteriaService.getPreMatchingUserByCriteria(username);
         return preMatchingUserByCriteria;
     }
 }

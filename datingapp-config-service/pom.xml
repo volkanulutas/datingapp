@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.datingapp</groupId>
-    <artifactId>datingapp-config-server</artifactId>
+    <artifactId>datingapp-config-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>datingapp-config-server</name>
-    <description>Dating App Config Server</description>
+    <name>datingapp-config-service</name>
+    <description>Dating App Config Service</description>
 
     <parent>
         <groupId>com.datingapp</groupId>

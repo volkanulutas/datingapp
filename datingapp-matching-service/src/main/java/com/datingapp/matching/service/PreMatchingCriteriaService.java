@@ -10,5 +10,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface PreMatchingCriteriaService {
-    PreMatchUserDto getPreMatchingUserByCriteria(String userId);
+    // TODO: hytrix
+    PreMatchUserDto getPreMatchingUserByCriteria(String username);
 }

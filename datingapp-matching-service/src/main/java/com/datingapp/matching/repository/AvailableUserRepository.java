@@ -14,7 +14,12 @@ import java.util.List;
  * @author volkanulutas
  */
 public interface AvailableUserRepository extends MongoRepository<AvailableUser, String> {
-    AvailableUser findByUsername(String username);
 
-    List<AvailableUserDto> findByGenderAndStatus(EnumUserGender gender, EnumUserStatus status);
+    AvailableUser findByUsernameAndIsDeleted(String username, boolean isDeleted);
+
+    List<AvailableUser> findByIsDeleted(boolean isDeleted);
+
+    List<AvailableUserDto> findByGenderAndStatusAndIsDeleted(EnumUserGender gender,
+                                                             EnumUserStatus online,
+                                                             boolean isDeleted);
 }

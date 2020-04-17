@@ -3,7 +3,7 @@ spring:
     name: datingapp-demo1-service
 
 server:
-  port: 9200
+  port: 9300
 
 eureka:
   client:

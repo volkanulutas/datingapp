@@ -13,11 +13,14 @@ eureka:
 zuul:
   ignoredServices: '*'
   routes:
-    datingapp-auth-service:
-      path: /auth/**
-      serviceId: datingapp-auth-service
+    datingapp-login-service:
+      path: /login/**
+      serviceId: datingapp-login-service
       sensitiveHeaders: Cookie,Set-Cookie
       stripPrefix: false
+    datingapp-user-service:
+      path: /user/**
+      serviceId: datingapp-user-service
     datingapp-matching-service:
       path: /matching/**
       serviceId: datingapp-matching-service

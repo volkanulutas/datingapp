@@ -25,7 +25,6 @@ public class AvailableUserConverter extends BaseConverter<AvailableUserDto, Avai
         target.setBirthDate(entity.getBirthDate());
         target.setBirthPlace(entity.getBirthPlace());
         target.setGender(entity.getGender());
-        target.setId(entity.getId());
         target.setName(entity.getName());
         target.setSurname(entity.getSurname());
         target.setStatus(entity.getStatus());
@@ -43,7 +42,6 @@ public class AvailableUserConverter extends BaseConverter<AvailableUserDto, Avai
         target.setBirthDate(dto.getBirthDate());
         target.setBirthPlace(dto.getBirthPlace());
         target.setGender(dto.getGender());
-        target.setId(dto.getId());
         target.setName(dto.getName());
         target.setSurname(dto.getSurname());
         target.setStatus(dto.getStatus());

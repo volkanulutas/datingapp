@@ -25,14 +25,18 @@
     <modules>
         <module>datingapp-apigateway-service</module>
         <module>datingapp-service-discovery</module>
-        <module>datingapp-config-server</module>
-        <module>datingapp-auth-service</module>
+        <module>datingapp-config-service</module>
+
+        <module>datingapp-user-serviceX</module>
+        <module>datingapp-login-serviceX</module>
+        <module>datingapp-matching-service</module>
         <module>datingapp-demo1-service</module>
 
         <module>datingapp-chat-service</module>
         <module>datingapp-game-service</module>
-        <module>datingapp-matching-service</module>
+
         <module>datingapp-common</module>
+        <module>datingapp-user-serviceee</module>
     </modules>
 
     <dependencies>

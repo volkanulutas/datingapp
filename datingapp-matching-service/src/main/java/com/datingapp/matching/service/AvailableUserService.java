@@ -2,8 +2,10 @@ package com.datingapp.matching.service;
 
 import com.datingapp.matching.data.common.EnumUserGender;
 import com.datingapp.matching.data.dto.AvailableUserDto;
+import com.datingapp.matching.data.entity.AvailableUser;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created on 11.04.2020
@@ -11,8 +13,7 @@ import java.util.List;
  * @author volkanulutas
  */
 public interface AvailableUserService {
-
-    boolean save(AvailableUserDto availableUserDto);
+    Optional<AvailableUserDto> save(AvailableUserDto availableUserDto);
 
     List<AvailableUserDto> getAvailableUsers();
 

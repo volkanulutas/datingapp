@@ -11,5 +11,5 @@ import java.util.List;
  * @author volkanulutas
  */
 public interface MatchingUserRepository extends MongoRepository<MatchUser, String> {
-    List<MatchUser> findByUser_Id(String userId);
+    List<MatchUser> findByUser_UsernameAndIsDeleted(String userId, boolean b);
 }
