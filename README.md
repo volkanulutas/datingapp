@@ -94,7 +94,8 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | Adı          | Tür   | Servis URL                                | Return                                               | Body           |
 |:-------------| :-----|:------------------------------------------| :----------------------------------------------------|:---------------|
 | HOME         | GET   | http://localhost:8080/matching            | Working Port                                         ||
-| MATCH USERS  | POST  | http://localhost:8080/matching/match      | MatchUserDto*                                        |username(String), username(String)|
+| MATCH USERS  | POST  | http://localhost:8080/matching/match      | Boolean                                             |username(String), username(String)|
+| MATCH LIST   | GET   | http://localhost:8080/matching/matchList  | MatchUserDto*                                         ||
 | PREMATCH LIST| GET   | http://localhost:8080/matching/pre/matchList  | AvailableUserDto*                                | username(String)|
 
 
@@ -155,3 +156,31 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
     }
 }
 ```       
+**MatchUserDto (*) 
+```json
+{
+    "id": "5e9995ece98881338040b2db",
+    "user": {
+        "id": "5e9897bee98881b50543fb74",
+        "username": "volkan",
+        "name": null,
+        "surname": null,
+        "birthDate": 0,
+        "birthPlace": null,
+        "status": null,
+        "gender": null
+    },
+    "matchingList": [
+        {
+            "id": "5e9897bee98881b50543fb75",
+            "username": "onurcan",
+            "name": null,
+            "surname": null,
+            "birthDate": 0,
+            "birthPlace": null,
+            "status": null,
+            "gender": null
+        }
+    ]
+}
+```  
