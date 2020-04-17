@@ -1,6 +1,8 @@
 # datingapp
 Datingapp
-
+<div class="text-red mb-2">
+  .text-red on white
+</div>
 16.04.2020 [WikiPage](https://github.com/volkanulutas/datingapp/wiki) devreye alındı. 
 
 # Gereksinimler
