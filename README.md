@@ -19,11 +19,11 @@ Datingapp
 
 **Grafik İşleri**
 
-***[NONE]** *
+***[NONE]**
 
 **Music**
 
-*Android[Nizammeddin Tuğral](https://github.com/)*
+*[Nizammeddin Tuğral](https://github.com/)*
 
 16.04.2020 [WikiPage](https://github.com/volkanulutas/datingapp/wiki) devreye alındı. 
 Not *italic* olarak belirtilen kısımlar taslak halindedir, geliştirme aşamasındadır.
