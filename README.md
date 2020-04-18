@@ -120,7 +120,8 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 | REGISTER     | POST   | http://localhost:8080/user/register  | UserDto*                                             | UserDto*         |
 | FIND USER    | GET    | http://localhost:8080/user/findUserByUsername | UserDto*                                    | username(String) |
 | DELETE USER  | DELETE | http://localhost:8080/user/delete    | boolean                                              | username(String) |
-| FORGET PASSWORD | POST | http://localhost:8080/user/forgetPassword| url(String- mail send)                          |username(String)  |
+| LIST USER    | GET    | http://localhost:8080/user/list      | List<UserDto>*                                       | username(String) |
+| *FORGET PASSWORD* | POST | http://localhost:8080/user/forgetPassword| url(String- mail send)                          |username(String)  |
 
 ### datingapp-matching-service
 
