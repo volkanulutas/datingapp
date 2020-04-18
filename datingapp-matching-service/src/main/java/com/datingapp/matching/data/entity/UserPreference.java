@@ -2,7 +2,6 @@ package com.datingapp.matching.data.entity;
 
 import com.datingapp.matching.data.common.EnumUserGender;
 import lombok.*;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 

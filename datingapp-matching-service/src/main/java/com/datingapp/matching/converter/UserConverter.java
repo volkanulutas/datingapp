@@ -12,36 +12,38 @@ import org.springframework.stereotype.Component;
 @Component
 public class UserConverter extends BaseConverter<UserDto, User> {
     @Override
-    public UserDto toDto(User entity) {
-        if (entity == null) {
+    public UserDto toDto(User source) {
+        if (source == null) {
             return null;
         }
         UserDto target = new UserDto();
-        target.setBirthDate(entity.getBirthDate());
-        target.setBirthPlace(entity.getBirthPlace());
-        target.setGender(entity.getGender());
-        target.setId(entity.getId());
-        target.setName(entity.getName());
-        target.setSurname(entity.getSurname());
-        target.setUsername(entity.getUsername());
-        target.setStatus(entity.getStatus());
+        target.setBirthDate(source.getBirthDate());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setGender(source.getGender());
+        target.setId(source.getId());
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setUsername(source.getUsername());
+        target.setDeleted(source.isDeleted());
+        target.setStatus(source.getStatus());
         return target;
     }
 
     @Override
-    public User toEntity(UserDto dto) {
-        if (dto == null) {
+    public User toEntity(UserDto source) {
+        if (source == null) {
             return null;
         }
         User target = new User();
-        target.setBirthDate(dto.getBirthDate());
-        target.setBirthPlace(dto.getBirthPlace());
-        target.setGender(dto.getGender());
-        target.setName(dto.getName());
-        target.setSurname(dto.getSurname());
-        target.setUsername(dto.getUsername());
-        target.setId(dto.getId());
-        target.setStatus(dto.getStatus());
+        target.setBirthDate(source.getBirthDate());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setGender(source.getGender());
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setUsername(source.getUsername());
+        target.setDeleted(source.isDeleted());
+        target.setId(source.getId());
+        target.setStatus(source.getStatus());
         return target;
     }
 }

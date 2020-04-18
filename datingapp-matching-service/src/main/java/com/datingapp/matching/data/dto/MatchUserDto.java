@@ -24,6 +24,8 @@ public class MatchUserDto extends BaseDto implements Serializable {
 
     private String id;
 
+    private boolean isDeleted;
+
     private User user;
 
     private List<User> matchingList;

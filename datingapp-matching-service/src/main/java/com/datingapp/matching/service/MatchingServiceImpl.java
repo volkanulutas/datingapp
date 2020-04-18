@@ -72,41 +72,72 @@ public class MatchingServiceImpl implements MatchingService {
 
     @Override
     public boolean deleteMatch(String username, String matchUsername) {
-        MatchUserDto matchUserDto = findMatchingByUsername(username);
-        List<User> matchingList = matchUserDto.getMatchingList();
-        if (matchingList.isEmpty()) {
+        try {
+            boolean b1 = handleRemoveOfMatching(username, matchUsername);
+            boolean b2 = handleRemoveOfMatching(matchUsername, username);
+            return b1 && b2;
+        } catch (Exception ex) {
+            log.error("delete match error");
             return false;
         }
-        User deletedObject = null;
-        for (User user : matchingList) {
-            if (user.getUsername().equals(matchUsername)) {
-                deletedObject = user;
-                break;
-            }
-        }
-        if (deletedObject != null) {
-            matchingList.remove(deletedObject);
-        }
-        MatchUser save = matchingUserRepository.save(matchUserConverter.toEntity(matchUserDto));
+    }
 
-        return save != null;
+    private boolean handleRemoveOfMatching(String username, String matchUsername) {
+        try {
+            MatchUserDto matchUserDto = findMatchingByUsername(username);
+            if (matchUserDto == null) {
+                return false;
+            }
+            List<User> matchingList = matchUserDto.getMatchingList();
+            if (matchingList.isEmpty()) {
+                return false;
+            }
+            List<User> tempMatchingList = new ArrayList<>();
+            for (User user : matchingList) {
+                if (!user.getUsername().equals(matchUsername)) {
+                    tempMatchingList.add(user);
+                }
+            }
+            matchUserDto.setMatchingList(tempMatchingList);
+            MatchUser save = matchingUserRepository.save(matchUserConverter.toEntity(matchUserDto));
+            return save != null;
+        } catch (Exception ex) {
+            log.error("handle Remove Matching error.", ex);
+        }
+        return false;
     }
 
     private void handleMatchingsOfUser(UserDto sourceUserDto, UserDto targetUserDto) {
         MatchUser sourceMatchingUser = findMatchingDataByUsername(sourceUserDto.getUsername());
-        if (sourceMatchingUser == null) { // There are no matchers case
+        if (sourceMatchingUser == null) { // There is no matching object
             sourceMatchingUser = new MatchUser();
-            List<User> sourceMatchingList = new ArrayList<>();
-            sourceMatchingList.add(userConverter.toEntity(targetUserDto));
-            sourceMatchingUser.setMatchingList(sourceMatchingList);
+            List<User> matchingList = new ArrayList<>();
             sourceMatchingUser.setUser(userConverter.toEntity(sourceUserDto));
-        } else { // There are matchers also
-            List<User> sourceMatchingList = sourceMatchingUser.getMatchingList();
-            if (sourceMatchingList.contains(targetUserDto)) { // If there is already matched
-                sourceMatchingList.add(userConverter.toEntity(targetUserDto));
+            matchingList.add(userConverter.toEntity(targetUserDto));
+            sourceMatchingUser.setMatchingList(matchingList);
+        } else {  // There is matching object
+            List<User> matchingList = sourceMatchingUser.getMatchingList();
+            if (matchingList == null) { // There are no matchers before
+                matchingList = new ArrayList<>();
+                matchingList.add(userConverter.toEntity(targetUserDto));
+                sourceMatchingUser.setMatchingList(matchingList);
+            } else { // There are matchers also
+                if (!containsMatchList(matchingList, targetUserDto.getUsername())) { // If there is not matched before
+                    sourceMatchingUser.setUser(userConverter.toEntity(sourceUserDto));
+                    matchingList.add(userConverter.toEntity(targetUserDto));
+                    sourceMatchingUser.setMatchingList(matchingList);
+                }
             }
-            sourceMatchingUser.setMatchingList(sourceMatchingList);
         }
         matchingUserRepository.save(sourceMatchingUser); // TODO: save metot olsun.
+    }
+
+    private boolean containsMatchList(List<User> matchingList, String username) {
+        for (User user : matchingList) {
+            if (user.getUsername().equals(username)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

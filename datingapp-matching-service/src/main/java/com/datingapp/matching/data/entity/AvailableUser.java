@@ -3,7 +3,6 @@ package com.datingapp.matching.data.entity;
 
 import com.datingapp.matching.data.common.EnumUserGender;
 import com.datingapp.matching.data.common.EnumUserStatus;
-import com.datingapp.matching.data.dto.UserPreferenceDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

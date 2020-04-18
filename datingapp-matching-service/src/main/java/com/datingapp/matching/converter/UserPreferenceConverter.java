@@ -18,7 +18,6 @@ public class UserPreferenceConverter extends BaseConverter<UserPreferenceDto, Us
             return null;
         }
         UserPreferenceDto target = new UserPreferenceDto();
-        target.setId(entity.getId());
         target.setGender(entity.getGender());
         target.setMaximumAge(entity.getMaximumAge());
         target.setMinimumAge(entity.getMinimumAge());
@@ -32,7 +31,6 @@ public class UserPreferenceConverter extends BaseConverter<UserPreferenceDto, Us
             return null;
         }
         UserPreference target = new UserPreference();
-        target.setId(dto.getId());
         target.setGender(dto.getGender());
         target.setMaximumAge(dto.getMaximumAge());
         target.setMinimumAge(dto.getMinimumAge());

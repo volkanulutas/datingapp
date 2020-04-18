@@ -23,6 +23,8 @@ public class PreMatchUserDto extends BaseDto implements Serializable {
 
     private String id;
 
+    private boolean isDeleted;
+
     private UserDto user;
 
     private List<UserDto> matchingList;

@@ -1,8 +1,6 @@
 package com.datingapp.matching.service;
 
-import com.datingapp.matching.converter.PreMatchUserConverter;
 import com.datingapp.matching.data.dto.PreMatchUserDto;
-import com.datingapp.matching.repository.PreMatchingUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,12 +11,6 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class PreMatchingServiceImpl implements PreMatchingService {
-
-    @Autowired
-    private PreMatchingUserRepository preMatchingUserRepository;
-
-    @Autowired
-    private PreMatchUserConverter preMatchConverter;
 
     @Autowired
     private PreMatchingCriteriaService preMatchingCriteriaService;

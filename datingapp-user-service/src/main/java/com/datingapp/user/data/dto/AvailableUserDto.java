@@ -21,6 +21,8 @@ public class AvailableUserDto extends BaseDto implements Serializable {
 
     private String id;
 
+    private boolean isDeleted;
+
     private String username;
 
     private String name;

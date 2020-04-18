@@ -12,26 +12,28 @@ import org.springframework.stereotype.Component;
 @Component
 public class MatchUserConverter extends BaseConverter<MatchUserDto, MatchUser> {
     @Override
-    public MatchUserDto toDto(MatchUser entity) {
-        if (entity == null) {
+    public MatchUserDto toDto(MatchUser source) {
+        if (source == null) {
             return null;
         }
         MatchUserDto target = new MatchUserDto();
-        target.setId(entity.getId());
-        target.setUser(entity.getUser());
-        target.setMatchingList(entity.getMatchingList());
+        target.setId(source.getId());
+        target.setUser(source.getUser());
+        target.setDeleted(source.isDeleted());
+        target.setMatchingList(source.getMatchingList());
         return target;
     }
 
     @Override
-    public MatchUser toEntity(MatchUserDto dto) {
-        if (dto == null) {
+    public MatchUser toEntity(MatchUserDto source) {
+        if (source == null) {
             return null;
         }
         MatchUser target = new MatchUser();
-        target.setId(dto.getId());
-        target.setMatchingList(dto.getMatchingList());
-        target.setUser(dto.getUser());
+        target.setId(source.getId());
+        target.setDeleted(source.isDeleted());
+        target.setMatchingList(source.getMatchingList());
+        target.setUser(source.getUser());
         return target;
     }
 }

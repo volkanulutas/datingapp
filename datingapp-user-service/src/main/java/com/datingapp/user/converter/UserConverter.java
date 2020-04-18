@@ -16,46 +16,73 @@ public class UserConverter extends BaseConverter<UserDto, User> {
     private UserPreferenceConverter userPreferenceConverter;
 
     @Override
-    public UserDto toDto(User entity) {
-        if (entity == null) {
+    public UserDto toDto(User source) {
+        if (source == null) {
             return null;
         }
-        UserDto dto = new UserDto();
-        dto.setId(entity.getId());
-        dto.setName(entity.getName());
-        dto.setSurname(entity.getSurname());
-        dto.setUsername(entity.getUsername());
-        dto.setPassword(entity.getPassword());
-        dto.setBirthDate(entity.getBirthDate());
-        dto.setBirthPlace(entity.getBirthPlace());
-        dto.setGender(entity.getGender());
-        dto.setLoginAttempt(entity.getLoginAttempt());
-        dto.setUserRole(entity.getUserRole());
-        dto.setStatus(entity.getStatus());
-        dto.setUserPicture(entity.getUserPicture());
-        dto.setUserPreference(userPreferenceConverter.toDto(entity.getUserPreference()));
-        return dto;
+        UserDto target = new UserDto();
+        target.setId(source.getId());
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setUsername(source.getUsername());
+        target.setPassword(source.getPassword());
+        target.setBirthDate(source.getBirthDate());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setDeleted(source.isDeleted());
+        target.setGender(source.getGender());
+        target.setLoginAttempt(source.getLoginAttempt());
+        target.setUserRole(source.getUserRole());
+        target.setStatus(source.getStatus());
+        target.setUserPicture(source.getUserPicture());
+        target.setUserPreference(userPreferenceConverter.toDto(source.getUserPreference()));
+        return target;
     }
 
     @Override
-    public User toEntity(UserDto dto) {
-        if (dto == null) {
+    public User toEntity(UserDto source) {
+        if (source == null) {
             return null;
         }
-        User entity = new User();
-        entity.setId(dto.getId());
-        entity.setName(dto.getName());
-        entity.setSurname(dto.getSurname());
-        entity.setUsername(dto.getUsername());
-        entity.setPassword(dto.getPassword());
-        entity.setBirthDate(dto.getBirthDate());
-        entity.setGender(dto.getGender());
-        entity.setBirthPlace(dto.getBirthPlace());
-        entity.setLoginAttempt(dto.getLoginAttempt());
-        entity.setUserRole(dto.getUserRole());
-        entity.setStatus(dto.getStatus());
-        entity.setUserPicture(dto.getUserPicture());
-        entity.setUserPreference(userPreferenceConverter.toEntity(dto.getUserPreference()));
-        return entity;
+        User target = new User();
+        target.setId(source.getId());
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setUsername(source.getUsername());
+        target.setPassword(source.getPassword());
+        target.setBirthDate(source.getBirthDate());
+        target.setGender(source.getGender());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setDeleted(source.isDeleted());
+        target.setLoginAttempt(source.getLoginAttempt());
+        target.setUserRole(source.getUserRole());
+        target.setStatus(source.getStatus());
+        target.setUserPicture(source.getUserPicture());
+        target.setUserPreference(userPreferenceConverter.toEntity(source.getUserPreference()));
+        return target;
+    }
+
+    @Override
+    public User toEntity(UserDto source, User target) {
+        if (source == null) {
+            return null;
+        }
+        if (target == null) {
+            target = new User();
+        }
+        target.setId(source.getId());
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setUsername(source.getUsername());
+        target.setPassword(source.getPassword());
+        target.setBirthDate(source.getBirthDate());
+        target.setGender(source.getGender());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setDeleted(source.isDeleted());
+        target.setLoginAttempt(source.getLoginAttempt());
+        target.setUserRole(source.getUserRole());
+        target.setStatus(source.getStatus());
+        target.setUserPicture(source.getUserPicture());
+        target.setUserPreference(userPreferenceConverter.toEntity(source.getUserPreference()));
+        return target;
     }
 }

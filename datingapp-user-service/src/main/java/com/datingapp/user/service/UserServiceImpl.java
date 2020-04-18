@@ -19,6 +19,7 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -58,7 +59,7 @@ public class UserServiceImpl implements UserService {
         if (user != null) {
             userDto.setId(user.getId());
         }
-        user = userConverter.toEntity(userDto);
+        user = userConverter.toEntity(userDto, user); // TODO: pass param engellenebilir mi
 
         PasswordEncoder encoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
         String encodedPassword = encoder.encode(user.getPassword());
@@ -81,8 +82,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAllUser() {
-        return userRepository.findByIsDeleted(false);
+    public List<UserDto> getAllUser() {
+        List<UserDto> userDtoList = new ArrayList<>();
+        List<User> userList = userRepository.findByIsDeleted(false);
+        userList.forEach(u -> userDtoList.add(userConverter.toDto(u)));
+        return userDtoList;
     }
 
     @Override
@@ -94,10 +98,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean deleteUser(String username) {
-        User user = findUserByUsernameData(username);
-        user.setDeleted(true);
-        User save = userRepository.save(user);
-        return save != null;
+        UserDto userDto = findUserByUsername(username);
+        if (userDto != null) {
+            userDto.setDeleted(true);
+            Optional<UserDto> save = saveUser(userDto);
+            return save != null;
+        } else {
+            return false;
+        }
     }
 
     private User findUserByUsernameData(String username) {

@@ -37,10 +37,7 @@ public class AvailableUserServiceImpl implements AvailableUserService {
     @Override
     public Optional<AvailableUserDto> save(AvailableUserDto availableUserDto) {
         AvailableUser availableUser = findAvailableUserByUsernameData(availableUserDto.getUsername());
-        if (availableUser == null) {
-            availableUserDto.setId(availableUserDto.getId());
-        }
-        availableUser = availableUserConverter.toEntity(availableUserDto);
+        availableUser = availableUserConverter.toEntity(availableUserDto, availableUser); // TODO: buna update için ihtiyaç duyduk niye? User da olmadı.
         AvailableUser savedAvUser = availableUserRepository.save(availableUser);
 
         AvailableUserDto avUserDto = Optional.of(availableUserConverter.toDto(savedAvUser)).orElseThrow(

@@ -17,36 +17,58 @@ public class AvailableUserConverter extends BaseConverter<AvailableUserDto, Avai
     private UserPreferenceConverter userPreferenceConverter;
 
     @Override
-    public AvailableUserDto toDto(AvailableUser entity) {
-        if (entity == null) {
+    public AvailableUserDto toDto(AvailableUser source) {
+        if (source == null) {
             return null;
         }
         AvailableUserDto target = new AvailableUserDto();
-        target.setBirthDate(entity.getBirthDate());
-        target.setBirthPlace(entity.getBirthPlace());
-        target.setGender(entity.getGender());
-        target.setName(entity.getName());
-        target.setSurname(entity.getSurname());
-        target.setStatus(entity.getStatus());
-        target.setUsername(entity.getUsername());
-        target.setUserPreference(userPreferenceConverter.toDto(entity.getUserPreference()));
+        target.setBirthDate(source.getBirthDate());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setGender(source.getGender());
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setStatus(source.getStatus());
+        target.setUsername(source.getUsername());
+        target.setDeleted(source.isDeleted());
+        target.setUserPreference(userPreferenceConverter.toDto(source.getUserPreference()));
         return target;
     }
 
     @Override
-    public AvailableUser toEntity(AvailableUserDto dto) {
-        if (dto == null) {
+    public AvailableUser toEntity(AvailableUserDto source) {
+        if (source == null) {
             return null;
         }
         AvailableUser target = new AvailableUser();
-        target.setBirthDate(dto.getBirthDate());
-        target.setBirthPlace(dto.getBirthPlace());
-        target.setGender(dto.getGender());
-        target.setName(dto.getName());
-        target.setSurname(dto.getSurname());
-        target.setStatus(dto.getStatus());
-        target.setUsername(dto.getUsername());
-        target.setUserPreference(userPreferenceConverter.toEntity(dto.getUserPreference()));
+        target.setBirthDate(source.getBirthDate());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setGender(source.getGender());
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setStatus(source.getStatus());
+        target.setUsername(source.getUsername());
+        target.setDeleted(source.isDeleted());
+        target.setUserPreference(userPreferenceConverter.toEntity(source.getUserPreference()));
+        return target;
+    }
+
+    @Override
+    public AvailableUser toEntity(AvailableUserDto source, AvailableUser target) {
+        if (source == null) {
+            return null;
+        }
+        if (target == null) {
+            target = new AvailableUser();
+        }
+        target.setBirthDate(source.getBirthDate());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setGender(source.getGender());
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setStatus(source.getStatus());
+        target.setUsername(source.getUsername());
+        target.setDeleted(source.isDeleted());
+        target.setUserPreference(userPreferenceConverter.toEntity(source.getUserPreference()));
         return target;
     }
 }

@@ -21,16 +21,16 @@ public class PreMatchUserConverter extends BaseConverter<PreMatchUserDto, PreMat
     private UserConverter userConverter;
 
     @Override
-    public PreMatchUserDto toDto(PreMatchUser entity) {
-        if (entity == null) {
+    public PreMatchUserDto toDto(PreMatchUser source) {
+        if (source == null) {
             return null;
         }
         PreMatchUserDto target = new PreMatchUserDto();
-        target.setId(entity.getId());
-        target.setUser(userConverter.toDto(entity.getUser()));
-
+        target.setId(source.getId());
+        target.setDeleted(source.isDeleted());
+        target.setUser(userConverter.toDto(source.getUser()));
         List<UserDto> userDtoList = new ArrayList<>();
-        for (User user : entity.getMatchingList()) {
+        for (User user : source.getMatchingList()) {
             userDtoList.add(userConverter.toDto(user));
         }
         target.setMatchingList(userDtoList);
@@ -38,16 +38,16 @@ public class PreMatchUserConverter extends BaseConverter<PreMatchUserDto, PreMat
     }
 
     @Override
-    public PreMatchUser toEntity(PreMatchUserDto dto) {
-        if (dto == null) {
+    public PreMatchUser toEntity(PreMatchUserDto source) {
+        if (source == null) {
             return null;
         }
         PreMatchUser target = new PreMatchUser();
-        target.setId(dto.getId());
-        target.setUser(userConverter.toEntity(dto.getUser()));
-
+        target.setId(source.getId());
+        target.setDeleted(source.isDeleted());
+        target.setUser(userConverter.toEntity(source.getUser()));
         List<User> userList = new ArrayList<>();
-        for (UserDto user : dto.getMatchingList()) {
+        for (UserDto user : source.getMatchingList()) {
             userList.add(userConverter.toEntity(user));
         }
         target.setMatchingList(userList);

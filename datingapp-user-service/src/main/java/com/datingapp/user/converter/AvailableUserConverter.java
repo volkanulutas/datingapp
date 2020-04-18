@@ -16,39 +16,41 @@ public class AvailableUserConverter extends BaseConverter<AvailableUserDto, User
     private UserPreferenceConverter userPreferenceConverter;
 
     @Override
-    public AvailableUserDto toDto(User entity) {
-        if (entity == null) {
+    public AvailableUserDto toDto(User source) {
+        if (source == null) {
             return null;
         }
         AvailableUserDto target = new AvailableUserDto();
-        target.setName(entity.getName());
-        target.setSurname(entity.getSurname());
-        target.setUsername(entity.getUsername());
-        target.setBirthDate(entity.getBirthDate());
-        target.setBirthPlace(entity.getBirthPlace());
-        target.setGender(entity.getGender());
-        target.setStatus(entity.getStatus());
-        if (entity.getUserPreference() != null) {
-            target.setUserPreference(userPreferenceConverter.toDto(entity.getUserPreference()));
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setUsername(source.getUsername());
+        target.setBirthDate(source.getBirthDate());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setDeleted(source.isDeleted());
+        target.setGender(source.getGender());
+        target.setStatus(source.getStatus());
+        if (source.getUserPreference() != null) {
+            target.setUserPreference(userPreferenceConverter.toDto(source.getUserPreference()));
         }
         return target;
     }
 
     @Override
-    public User toEntity(AvailableUserDto dto) {
-        if (dto == null) {
+    public User toEntity(AvailableUserDto source) {
+        if (source == null) {
             return null;
         }
         User target = new User();
-        target.setName(dto.getName());
-        target.setSurname(dto.getSurname());
-        target.setUsername(dto.getUsername());
-        target.setBirthDate(dto.getBirthDate());
-        target.setBirthPlace(dto.getBirthPlace());
-        target.setStatus(dto.getStatus());
-        target.setGender(dto.getGender());
-        if (dto.getUserPreference() != null) {
-            target.setUserPreference(userPreferenceConverter.toEntity(dto.getUserPreference()));
+        target.setName(source.getName());
+        target.setSurname(source.getSurname());
+        target.setUsername(source.getUsername());
+        target.setBirthDate(source.getBirthDate());
+        target.setBirthPlace(source.getBirthPlace());
+        target.setStatus(source.getStatus());
+        target.setGender(source.getGender());
+        target.setDeleted(source.isDeleted());
+        if (source.getUserPreference() != null) {
+            target.setUserPreference(userPreferenceConverter.toEntity(source.getUserPreference()));
         }
         return target;
     }

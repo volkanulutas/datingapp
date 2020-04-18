@@ -18,8 +18,6 @@ import java.io.Serializable;
 public class UserPreferenceDto extends BaseDto implements Serializable {
     private static final long serialVersionUID = 2041349911705616682L;
 
-    private String id;
-
     private int placeRange;
 
     private int minimumAge;

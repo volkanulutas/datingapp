@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * Created on 28.03.2020
  *
@@ -52,5 +54,12 @@ public class UserController {
     @DeleteMapping(value = "/delete")
     public boolean deleteUser(@RequestParam String username) {
         return userService.deleteUser(username);
+    }
+
+    @GetMapping(value = "/list")
+    public ResponseEntity<List<UserDto>> list() {
+        List<UserDto> allUser = userService.getAllUser();
+        return (allUser.isEmpty()) ? new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR)
+                : new ResponseEntity<>(allUser, HttpStatus.OK);
     }
 }

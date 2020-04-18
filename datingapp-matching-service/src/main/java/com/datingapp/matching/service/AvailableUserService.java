@@ -2,7 +2,6 @@ package com.datingapp.matching.service;
 
 import com.datingapp.matching.data.common.EnumUserGender;
 import com.datingapp.matching.data.dto.AvailableUserDto;
-import com.datingapp.matching.data.entity.AvailableUser;
 
 import java.util.List;
 import java.util.Optional;

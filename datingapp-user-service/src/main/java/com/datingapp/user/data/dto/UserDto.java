@@ -24,6 +24,8 @@ public class UserDto extends BaseDto implements Serializable {
 
     public String id;
 
+    public boolean isDeleted;
+
     private String username;
 
     private String password;

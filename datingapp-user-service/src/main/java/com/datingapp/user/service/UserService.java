@@ -2,7 +2,6 @@ package com.datingapp.user.service;
 
 import com.datingapp.user.data.dto.AvailableUserDto;
 import com.datingapp.user.data.dto.UserDto;
-import com.datingapp.user.data.entity.User;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,7 +15,7 @@ public interface UserService {
 
     Optional<UserDto> saveUser(UserDto user);
 
-    List<User> getAllUser();
+    List<UserDto> getAllUser();
 
     void sendAvailableUser(AvailableUserDto dto);
 

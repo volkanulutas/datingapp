@@ -1,5 +1,6 @@
 package com.datingapp.matching.repository;
 
+import com.datingapp.matching.data.entity.MatchUser;
 import com.datingapp.matching.data.entity.PreMatchUser;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
@@ -11,5 +12,5 @@ import java.util.List;
  * @author volkanulutas
  */
 public interface PreMatchingUserRepository extends MongoRepository<PreMatchUser, String> {
-    List<PreMatchUser> findByUser_Id(String userId);
+    List<MatchUser> findByUser_UsernameAndIsDeleted(String username, boolean isDeleted);
 }
