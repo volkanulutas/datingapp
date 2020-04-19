@@ -40,7 +40,6 @@ public class UserController {
     @RequestMapping(value = "/findUserByUsername", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<UserDto> findUserByUsername(@RequestParam String username) {
         UserDto userDto = userService.findUserByUsername(username);
-
         return (userDto == null) ? new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR)
                 : new ResponseEntity<>(userDto, HttpStatus.OK);
     }
