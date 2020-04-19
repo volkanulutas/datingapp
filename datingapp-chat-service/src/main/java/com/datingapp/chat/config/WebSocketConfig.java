@@ -17,23 +17,21 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws").withSockJS();
+        registry.addEndpoint("/ws").setAllowedOrigins("*").withSockJS();
     }
 
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.setApplicationDestinationPrefixes("/app");
-        registry.enableSimpleBroker("/topic");   // Enables a simple in-memory broker
-
-
-        //   Use this for enabling a Full featured broker like RabbitMQ
-
+        registry.setApplicationDestinationPrefixes("/chat-app"); // app
+        registry.enableSimpleBroker("/chat-room");
+        // /topic
         /*
-        registry.enableStompBrokerRelay("/topic")
+        registry.enableStompBrokerRelay("/chat-room")
                 .setRelayHost("localhost")
                 .setRelayPort(61613)
                 .setClientLogin("guest")
                 .setClientPasscode("guest");
-        */
+
+         */
     }
 }
