@@ -1,4 +1,4 @@
-package com.datingapp.matching.data.dto;
+package com.datingapp.chat.data.dto;
 
 
 import lombok.AllArgsConstructor;
@@ -19,7 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MatchUserDto extends BaseDto implements Serializable {
-    private static final long serialVersionUID = 2100040422552005150L;
+    private static final long serialVersionUID = 4479874208352915120L;
 
     private String id;
 

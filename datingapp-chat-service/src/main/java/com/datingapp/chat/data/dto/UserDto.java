@@ -1,18 +1,20 @@
-package com.datingapp.matching.data.dto;
+package com.datingapp.chat.data.dto;
 
-import com.datingapp.matching.data.common.EnumUserGender;
-import com.datingapp.matching.data.common.EnumUserStatus;
+import com.datingapp.chat.data.common.EnumUserGender;
+import com.datingapp.chat.data.common.EnumUserStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 @Data
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto extends BaseDto {
-    private static final long serialVersionUID = 2390062131299750880L;
+public class UserDto extends BaseDto implements Serializable {
+    private static final long serialVersionUID = -1530182518882098453L;
 
     private String id;
 

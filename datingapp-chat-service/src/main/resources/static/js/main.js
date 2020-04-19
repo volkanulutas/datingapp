@@ -16,6 +16,23 @@ var colors = [
     '#ffc107', '#ff85af', '#FF9800', '#39bbb0'
 ];
 
+
+let dropdown = $('#locality-dropdown');
+
+dropdown.empty();
+
+dropdown.append('<option selected="true" disabled>Choose State/Province</option>');
+dropdown.prop('selectedIndex', 0);
+
+const url = 'localhost:8080/matching/matchList?username=volkan';
+
+// Populate dropdown with list of provinces
+$.getJSON(url, function (data) {
+  $.each(data, function (key, entry) {
+    dropdown.append($('<option></option>').attr('value', entry.abbreviation).text(entry.name));
+  })
+});
+
 function connect(event) {
     username = document.querySelector('#name').value.trim();
 

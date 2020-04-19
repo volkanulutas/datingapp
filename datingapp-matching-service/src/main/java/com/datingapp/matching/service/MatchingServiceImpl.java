@@ -88,14 +88,14 @@ public class MatchingServiceImpl implements MatchingService {
             if (matchUserDto == null) {
                 return false;
             }
-            List<User> matchingList = matchUserDto.getMatchingList();
+            List<UserDto> matchingList = matchUserDto.getMatchingList();
             if (matchingList.isEmpty()) {
                 return false;
             }
-            List<User> tempMatchingList = new ArrayList<>();
-            for (User user : matchingList) {
-                if (!user.getUsername().equals(matchUsername)) {
-                    tempMatchingList.add(user);
+            List<UserDto> tempMatchingList = new ArrayList<>();
+            for (UserDto userDto : matchingList) {
+                if (!userDto.getUsername().equals(matchUsername)) {
+                    tempMatchingList.add(userDto);
                 }
             }
             matchUserDto.setMatchingList(tempMatchingList);
