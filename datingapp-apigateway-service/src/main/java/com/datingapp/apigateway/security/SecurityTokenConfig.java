@@ -1,18 +1,14 @@
 package com.datingapp.apigateway.security;
 
+import com.datingapp.common.JwtAuthenticationConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
-import javax.servlet.http.HttpServletResponse;
 
 /**
- * Created on 28.03.2020
+ * Created on 15.04.2020
  *
  * @author volkanulutas
  */
@@ -20,35 +16,37 @@ import javax.servlet.http.HttpServletResponse;
 public class SecurityTokenConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private JwtConfig jwtConfig;
-
-    @Autowired
-    private JwtTokenAuthenticationFilter authenticationFilter;
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .csrf().disable()
-                // make sure we use stateless session; session won't be used to store user's state.
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                // handle an authorized attempts
-                .exceptionHandling().authenticationEntryPoint((req, rsp, e) -> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED))
-                .and()
-                // Add a filter to validate the tokens with every request
-                .addFilterAfter(authenticationFilter, UsernamePasswordAuthenticationFilter.class)
-                // authorization requests config
-                .authorizeRequests()
-                // allow all who are accessing "auth" service
-                .antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
-                // must be an admin if trying to access admin area (authentication is also required here)
-                .antMatchers("/demo1" + "/admin/**").hasRole("ADMIN")
-                // Any other request must be authenticated
-                .anyRequest().authenticated();
-    }
+    private JwtAuthenticationConfig config;
 
     @Bean
-    public JwtConfig jwtConfig() {
-        return new JwtConfig();
+    public JwtAuthenticationConfig jwtConfig() {
+        return new JwtAuthenticationConfig();
+    }
+
+    @Override
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity
+                .csrf().disable();
+        /*
+        httpSecurity
+                .csrf().disable()
+                .logout().disable()
+                .formLogin().disable()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                //.and()
+                //.anonymous()
+                .and()
+                .exceptionHandling().authenticationEntryPoint(
+                (req, rsp, e) -> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED))
+                .and()
+                .addFilterAfter(new JwtTokenAuthenticationFilter(config),
+                        UsernamePasswordAuthenticationFilter.class)
+                .authorizeRequests()
+                .antMatchers(config.getUrl()).permitAll()
+                .anyRequest().authenticated();
+        */
+        //.antMatchers("/demo1" + "/admin/**").hasRole("ADMIN")
+        // .antMatchers("/matching/**").permitAll()
+        //.antMatchers("/demo1/**").permitAll();
     }
 }

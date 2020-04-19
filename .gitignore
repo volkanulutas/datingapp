@@ -1,5 +1,5 @@
 /target/
-/datingapp-auth-service2/target/
+/datingapp-auth-service/target/
 /datingapp-chat-service/target/
 /datingapp-game-service/target/
 /datingapp-login-service/target/
@@ -9,8 +9,7 @@
 /.idea/
 .DS_Store
 .idea/workspace.xml
-datingapp-auth-demo/datingapp-auth-demo.iml
-datingapp-auth-service2/.DS_Store
+datingapp-login-service/.DS_Store
 datingapp-chat-service/src/main/java/com/datingapp/.DS_Store
 datingapp-config-server/.DS_Store
 datingapp-config-server/src/.DS_Store
@@ -19,9 +18,9 @@ datingapp-config-server/src/main/java/.DS_Store
 datingapp-config-server/src/main/java/com/.DS_Store
 .DS_Store
 .idea/workspace.xml
-datingapp-auth-service2/.DS_Store
+datingapp-login-service/.DS_Store
 .DS_Store
 .idea/workspace.xml
-datingapp-auth-service2/.DS_Store
+datingapp-login-service/.DS_Store
 /.github/
 /.idea/

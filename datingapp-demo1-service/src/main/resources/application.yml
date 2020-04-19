@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: datingapp-demo1-service
+
+server:
+  port: 9300
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+rabbitmq:
+  addresses: localhost:5672
+  adminAddresses: http://localhost:15672
+  nodes: rabbit@localhost
+  username: guest
+  password: guest
+  virtual_host: /
+  useSSL: false
+  sslProperties:
+  ssl:
+    keyStore:
+    keyStorePassphrase:
+    trustStore:
+    trustStorePassphrase:
+  channelCacheSize: 100
+
+logging:
+  level:
+    org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
+    com.mintbeans.chat.service:
+      MessagePublisher: INFO
+      MessageSubscriber: INFO
+
