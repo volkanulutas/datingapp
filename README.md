@@ -143,7 +143,9 @@ Lombok Plugin'ini IDEA'ya ekleyiniz. @Getter ve @Setter @Slf4j gibi kullanımlar
 
 | Adı          | Tür   | Servis URL                      | Return                                                | Body         |
 |:-------------| :-----|:--------------------------------| :-----------------------------------------------------|:---------------|
-| HOME         | GET   | http://localhost:8080/chat      | Working Port                                          ||
+| *HOME*         | GET   | http://localhost:8080/chat      | Working Port                                          ||
+| CHAT HISTORY   | GET   | http://localhost:8080/chat/chatHistory | ChatMessageDto*                                 | username (String), otherUsername(String)|
+| FRIEND LIST    | GET   | http://localhost:8080/chat/chatHistory | List<String> otherUsernameList                  | username (String) |
 
 ### datingapp-game-service
 
@@ -248,4 +250,9 @@ Oyundaki para/coin yönetiminin yapıldığı servis.
         }
     ]
 }
+```  
+
+**ChatMessageDto (*) **
+```json
+
 ```  
