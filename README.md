@@ -1,6 +1,8 @@
 # datingapp
 Datingapp
 
+![](https://github.com/volkanulutas/datingapp/blob/master/.github/ISSUE_TEMPLATE/logo.png)
+
 ## Roller
 
 **Co-Founders** 
