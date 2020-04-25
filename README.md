@@ -1,7 +1,10 @@
 # datingapp
 Datingapp
 
-![](https://github.com/volkanulutas/datingapp/blob/master/.github/ISSUE_TEMPLATE/logo.png)
+![]()
+
+<img src="https://github.com/volkanulutas/datingapp/blob/master/.github/ISSUE_TEMPLATE/logo.png"
+     style="float: left; margin-right: 10px;" height="100" width="150" />
 
 ## Roller
 
