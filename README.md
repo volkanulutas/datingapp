@@ -4,7 +4,7 @@ Datingapp
 ![]()
 
 <img src="https://github.com/volkanulutas/datingapp/blob/master/.github/ISSUE_TEMPLATE/logo.png"
-     style="float: left; margin-right: 10px;" height="100" width="150" />
+     style="float: left; margin-right: 10px;" height="200" width="300" />
 
 ## Roller
 
