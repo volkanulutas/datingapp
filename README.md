@@ -40,6 +40,20 @@ Not *italic* olarak belirtilen kısımlar taslak halindedir, geliştirme aşamas
 
 ## RabbitMQ
 
+**Windows**
+
+**Kurulum:**
+- (https://www.erlang.org/downloads) sayfasında en son major sürüm olan "OTP 22.3 Windows 64-bit Binary File" indirilir ve install edilir.
+
+- (https://www.rabbitmq.com/install-windows.html) Direct Downloads altında "rabbitmq-server-3.8.3.exe" indirilir ve install edilir.
+
+- Servis otomatik çalışacaktır.
+
+- Default porttan (15672) ile Management Panele erişmek için aşağıdaki adımlar izlenir.
+     - RabbitMq nun kurulu olduğu dizinde örnekteki kısayola gidilir. (C:\Program Files (x86)\RabbitMQ Server\rabbitmq_server-3.2.3\sbin.)
+     - Command Line da "rabbitmq-plugins enable rabbitmq_management" komutu çalıştırılır (servisi restart etmek gerekebilir) ve http://localhost:15672/#/ adresi üzerinde panele username:guest password:guest bilgileriyle giriş yapılabilir.
+     
+     
 **MacOs**
 
 **Kurulum:**
