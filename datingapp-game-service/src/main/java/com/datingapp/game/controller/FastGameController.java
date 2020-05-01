@@ -1,16 +1,11 @@
 package com.datingapp.game.controller;
 
-import com.datingapp.game.data.dto.GameSessionDto;
-import com.datingapp.game.data.dto.GameSessionInitiateDto;
-import com.datingapp.game.data.dto.QuestionAnsweredDto;
+import com.datingapp.game.data.dto.*;
 import com.datingapp.game.service.GameSessionServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created on 24.03.2020
@@ -41,6 +36,16 @@ public class FastGameController {
     @PostMapping(value = "/saveAnswer")
     public boolean saveAnswer(@RequestBody QuestionAnsweredDto questionAnsweredDto) {
         return gameSessionService.saveAnswer(questionAnsweredDto);
+    }
+
+    @PostMapping(value = "/saveScore")
+    public boolean saveScore(@RequestBody AnswerScoredDto answerScoredDto) {
+        return gameSessionService.saveScore(answerScoredDto);
+    }
+
+    @PostMapping(value = "/openParticipantFeature")
+    public ParticipantFeatureDto getParticipantFeature(@RequestBody ParticipantFeatureRequestDto participantFeatureRequestDto) {
+        return gameSessionService.getParticipantFeature(participantFeatureRequestDto);
     }
 
 }

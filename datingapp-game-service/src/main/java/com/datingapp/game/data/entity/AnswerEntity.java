@@ -13,6 +13,7 @@ public class AnswerEntity extends BaseEntity {
 
     private String participantId;
     private String content;
+    private int score;
 
     public String getParticipantId() {
         return participantId;
@@ -28,5 +29,13 @@ public class AnswerEntity extends BaseEntity {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }

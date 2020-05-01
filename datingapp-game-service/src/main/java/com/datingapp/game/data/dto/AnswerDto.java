@@ -10,6 +10,7 @@ public class AnswerDto extends BaseDto {
 
     private String content;
     private Long participantId;
+    private int score;
 
     public String getContent() {
         return content;
@@ -27,4 +28,11 @@ public class AnswerDto extends BaseDto {
         this.participantId = participantId;
     }
 
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }

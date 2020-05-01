@@ -14,7 +14,7 @@ import java.util.List;
 public class ParticipantEntity extends BaseEntity {
 
     private String nickname;
-    private List<ParticipantFeatureEntity> featureList;
+    private List<ParticipantFeatureEntity> participantFeatureList;
 
     public String getNickname() {
         return nickname;
@@ -24,11 +24,11 @@ public class ParticipantEntity extends BaseEntity {
         this.nickname = nickname;
     }
 
-    public List<ParticipantFeatureEntity> getFeatureList() {
-        return featureList;
+    public List<ParticipantFeatureEntity> getParticipantFeatureList() {
+        return participantFeatureList;
     }
 
-    public void setFeatureList(List<ParticipantFeatureEntity> featureList) {
-        this.featureList = featureList;
+    public void setParticipantFeatureList(List<ParticipantFeatureEntity> participantFeatureList) {
+        this.participantFeatureList = participantFeatureList;
     }
 }

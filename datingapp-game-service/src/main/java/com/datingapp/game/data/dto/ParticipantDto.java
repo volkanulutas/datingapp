@@ -11,7 +11,7 @@ import java.util.List;
 public class ParticipantDto extends BaseDto {
 
     private String nickname;
-    private List<ParticipantFeatureDto> featureList;
+    private List<ParticipantFeatureDto> participantFeatureList;
 
     public String getNickname() {
         return nickname;
@@ -21,11 +21,11 @@ public class ParticipantDto extends BaseDto {
         this.nickname = nickname;
     }
 
-    public List<ParticipantFeatureDto> getFeatureList() {
-        return featureList;
+    public List<ParticipantFeatureDto> getParticipantFeatureList() {
+        return participantFeatureList;
     }
 
-    public void setFeatureList(List<ParticipantFeatureDto> featureList) {
-        this.featureList = featureList;
+    public void setParticipantFeatureList(List<ParticipantFeatureDto> participantFeatureList) {
+        this.participantFeatureList = participantFeatureList;
     }
 }

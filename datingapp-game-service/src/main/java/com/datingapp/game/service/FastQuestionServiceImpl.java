@@ -54,7 +54,7 @@ public class FastQuestionServiceImpl implements FastQuestionService {
 
     @Override
     public List<FastQuestionDto> getRandomQuestions(int number) {
-        SampleOperation matchStage = Aggregation.sample(5);
+        SampleOperation matchStage = Aggregation.sample(number);
         Aggregation aggregation = Aggregation.newAggregation(matchStage);
         AggregationResults<FastQuestionEntity> output = mongoTemplate.aggregate(aggregation, "FastQuestion", FastQuestionEntity.class);
         List<FastQuestionEntity> mappedResults = output.getMappedResults();
