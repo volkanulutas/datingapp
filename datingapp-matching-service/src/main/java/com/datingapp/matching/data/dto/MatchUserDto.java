@@ -1,10 +1,7 @@
 package com.datingapp.matching.data.dto;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -14,7 +11,8 @@ import java.util.List;
  *
  * @author volkanulutas
  */
-@Data
+@Getter
+@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor

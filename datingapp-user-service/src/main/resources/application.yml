@@ -34,16 +34,13 @@ rabbitmq:
     trustStorePassphrase:
   channelCacheSize: 100
 
-
-
-
 logging:
   level:
     root: INFO
     org.springframework.web: INFO
-    org.hibernate: ERROR
+    org.hibernate: INFO
     org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
-    com.mintbeans.chat.service:
+    com.datingapp.user:
       MessagePublisher: INFO
       MessageSubscriber: INFO
 

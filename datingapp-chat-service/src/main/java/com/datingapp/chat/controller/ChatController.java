@@ -1,6 +1,8 @@
 package com.datingapp.chat.controller;
 
-import com.datingapp.chat.model.ChatMessage;
+import com.datingapp.chat.data.common.EnumMessageType;
+import com.datingapp.chat.data.entity.ChatMessage;
+import com.datingapp.chat.service.ChatService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
@@ -24,10 +26,15 @@ public class ChatController {
     @Autowired
     private SimpMessageSendingOperations messagingTemplate;
 
+    @Autowired
+    private ChatService chatService;
+
     @MessageMapping("/chat/{roomId}/sendMessage")
     public ChatMessage sendMessage(@DestinationVariable String roomId, @Payload ChatMessage chatMessage) {
-        log.info(roomId + " Chat message recieved is " + chatMessage.getContent());
+        log.info(roomId + " Chat message received is " + chatMessage.getContent());
         messagingTemplate.convertAndSend(format("/chat-room/%s", roomId), chatMessage);
+
+        chatService.save(roomId, chatMessage);
         return chatMessage;
     }
 
@@ -37,12 +44,14 @@ public class ChatController {
         String currentRoomId = (String) headerAccessor.getSessionAttributes().put("room_id", roomId);
         if (currentRoomId != null) {
             ChatMessage leaveMessage = new ChatMessage();
-            leaveMessage.setType(ChatMessage.MessageType.LEAVE);
+            leaveMessage.setType(EnumMessageType.LEAVE);
             leaveMessage.setSender(chatMessage.getSender());
             messagingTemplate.convertAndSend(format("/chat-room/%s", currentRoomId), leaveMessage);
         }
         headerAccessor.getSessionAttributes().put("name", chatMessage.getSender());
         messagingTemplate.convertAndSend(format("/chat-room/%s", roomId), chatMessage);
+
+        chatService.save(roomId, chatMessage);
         return chatMessage;
     }
 

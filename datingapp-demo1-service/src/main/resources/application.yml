@@ -28,8 +28,10 @@ rabbitmq:
 
 logging:
   level:
+    root: INFO
+    org.springframework.web: INFO
+    org.hibernate: INFO
     org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
-    com.mintbeans.chat.service:
+    com.datingapp.demo1:
       MessagePublisher: INFO
       MessageSubscriber: INFO
-

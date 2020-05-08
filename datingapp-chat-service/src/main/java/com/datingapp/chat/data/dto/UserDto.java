@@ -9,6 +9,11 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
+/**
+ * Created on 28.03.2020
+ *
+ * @author volkanulutas
+ */
 @Data
 @ToString
 @NoArgsConstructor

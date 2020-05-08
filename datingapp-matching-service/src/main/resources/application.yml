@@ -35,12 +35,16 @@ logging:
   level:
     root: INFO
     org.springframework.web: INFO
-    org.hibernate: ERROR
+    org.hibernate: INFO
     org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
-    com.mintbeans.chat.service:
+    com.datingapp.matching:
       MessagePublisher: INFO
       MessageSubscriber: INFO
 
 amqp.availableuser.exchange: availableuser.exchange
 amqp.availableuser.routingkey: availableuser.routingkey
 amqp.availableuser.queuename: availableuser.queue
+
+amqp.matcheduser.exchange: matcheduser.exchange
+amqp.matcheduser.routingkey: matcheduser.routingkey
+amqp.matcheduser.queuename: matcheduser.queuename

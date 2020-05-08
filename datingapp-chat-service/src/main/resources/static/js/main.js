@@ -64,7 +64,7 @@ function sendMessage(event) {
             type: 'CHAT'
         };
 
-        stompClient.send('/chat-app/chat/'+room+'/sendMessage', {}, JSON.stringify(chatMessage));
+        stompClient.send('/chat-app/chat/'+ room +'/sendMessage', {}, JSON.stringify(chatMessage));
         messageInput.value = '';
     }
     event.preventDefault();

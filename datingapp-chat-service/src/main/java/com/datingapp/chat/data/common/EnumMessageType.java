@@ -1,0 +1,15 @@
+package com.datingapp.chat.data.common;
+
+import lombok.Getter;
+
+/**
+ * Created on 28.03.2020
+ *
+ * @author volkanulutas
+ */
+@Getter
+public enum EnumMessageType {
+    CHAT,
+    JOIN,
+    LEAVE
+}

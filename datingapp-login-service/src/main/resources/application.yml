@@ -14,9 +14,9 @@ logging:
   level:
     root: INFO
     org.springframework.web: INFO
-    org.hibernate: ERROR
+    org.hibernate: INFO
     org.springframework.amqp.rabbit.core.RabbitTemplate: INFO
-    com.mintbeans.chat.service:
+    com.datingapp.login:
       MessagePublisher: INFO
       MessageSubscriber: INFO
 

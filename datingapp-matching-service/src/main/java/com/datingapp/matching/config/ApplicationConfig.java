@@ -25,4 +25,13 @@ public class ApplicationConfig {
 
     @Value("${amqp.availableuser.queuename}")
     private String availableMatchQueueQueueName;
+
+    @Value("${amqp.matcheduser.exchange}")
+    private String matchedUserQueueExchange;
+
+    @Value("${amqp.matcheduser.routingkey}")
+    private String matchedUserQueueRoutingKey;
+
+    @Value("${amqp.matcheduser.queuename}")
+    private String matchedUserQueueQueueName;
 }

@@ -5,8 +5,7 @@ import com.datingapp.user.data.common.EnumUserRole;
 import com.datingapp.user.data.dto.UserDto;
 import com.datingapp.user.data.dto.UserPreferenceDto;
 import com.datingapp.user.service.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
@@ -18,8 +17,8 @@ import org.springframework.stereotype.Component;
  * @author volkanulutas
  */
 @Component
+@Slf4j
 public class AuthApplicationStartup {
-    private static final Logger LOGGER = LoggerFactory.getLogger(AuthApplicationStartup.class);
 
     @Autowired
     private UserService userService;

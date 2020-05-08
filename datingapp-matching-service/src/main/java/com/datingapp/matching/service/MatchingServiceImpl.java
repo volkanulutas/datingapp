@@ -109,6 +109,7 @@ public class MatchingServiceImpl implements MatchingService {
 
     private void handleMatchingsOfUser(UserDto sourceUserDto, UserDto targetUserDto) {
         MatchUser sourceMatchingUser = findMatchingDataByUsername(sourceUserDto.getUsername());
+
         if (sourceMatchingUser == null) { // There is no matching object
             sourceMatchingUser = new MatchUser();
             List<User> matchingList = new ArrayList<>();
